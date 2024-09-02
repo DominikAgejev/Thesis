@@ -1,0 +1,51 @@
+\babel@toc {croatian}{}\relax 
+\babel@toc {croatian}{}\relax 
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{\numberline {1.}Uvod}{3}{chapter.1}%
+\contentsline {chapter}{\numberline {2.}Uvod u OCR}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1.}Predobrada}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1.}Binarizacija}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2.}Ispravljanje nagnuća}{6}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2.}Segmentacija}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3.}Izdvajanje značajki}{6}{section.2.3}%
+\contentsline {section}{\numberline {2.4.}Klasifikacijske arhitekture}{7}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1.}Usporedba predložaka}{7}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2.}CNN}{7}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3.}RNN}{7}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4.}LSTM}{7}{subsection.2.4.4}%
+\contentsline {section}{\numberline {2.5.}Naknadna obrada}{7}{section.2.5}%
+\contentsline {chapter}{\numberline {3.}OCR starijih tekstova}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1.}Pregled literature}{8}{section.3.1}%
+\contentsline {chapter}{\numberline {4.}Tesseract}{9}{chapter.4}%
+\contentsline {section}{\numberline {4.1.}Predobrada}{9}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1.}Binarizacija}{9}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2.}Eliminacija šuma}{9}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3.}Analiza uređenja stranice}{10}{subsection.4.1.3}%
+\contentsline {chapter}{\numberline {5.}Ocular}{12}{chapter.5}%
+\contentsline {chapter}{\numberline {6.}Metodologija}{13}{chapter.6}%
+\contentsline {section}{\numberline {6.1.}Ispitni skup podataka}{13}{section.6.1}%
+\contentsline {section}{\numberline {6.2.}Mjere uspješnosti}{13}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1.}Character Error Rate}{13}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2.}Word Error Rate}{14}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3.}F1?}{14}{section.6.3}%
+\contentsline {section}{\numberline {6.4.}Recall?}{14}{section.6.4}%
+\contentsline {chapter}{\numberline {7.}Optimizacija Oculara}{15}{chapter.7}%
+\contentsline {section}{\numberline {7.1.}Jezični model}{15}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1.}Proširenje podacima van domene}{15}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2.}Proširenje nesavršenim podatcima}{15}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2.}Ispitivanje ortografskih značajki}{15}{section.7.2}%
+\contentsline {chapter}{\numberline {8.}Sinteza rješenja}{16}{chapter.8}%
+\contentsline {chapter}{\numberline {9.}Diskusija}{17}{chapter.9}%
+\contentsline {chapter}{\numberline {10.}Zaključak}{18}{chapter.10}%
+\contentsline {chapter}{Literatura}{19}{chapter*.6}%
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{Sa\v {z}etak}{22}{chapter*.7}%
+\babel@toc {croatian}{}\relax 
+\babel@toc {croatian}{}\relax 
+\babel@toc {croatian}{}\relax 
+\babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{23}{chapter*.8}%
+\babel@toc {croatian}{}\relax 
+\babel@toc {english}{}\relax 
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{\numberline {A:}The Code}{24}{chapter.1}%

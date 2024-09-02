@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99d (TeX Live 2023)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: zavrsni_rad.aux
+The style file: fer_IEEEtran_HR.bst
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Reallocated singl_function (elt_size=4) to 100 items from 50.
+Reallocated singl_function (elt_size=4) to 150 items from 100.
+Database file #1: library.bib
+Warning--I didn't find a database entry for "Berg-Kirkpatrick2013"
+Warning--I didn't find a database entry for "Hassanein2015"
+Warning--I didn't find a database entry for "Ocular"
+Warning--empty journal in Fujitake2023
+Warning--empty journal in Olejniczak2022
+Warning--empty journal in Borovikov2014
+Warning--empty journal in Wick2018
+Warning--empty journal in Berg2013
+Warning--empty journal in Berg2014
+You've used 20 entries,
+            4225 wiz_defined-function locations,
+            979 strings with 11737 characters,
+and the built_in function-call counts, 13791 in all, are:
+= -- 1067
+> -- 299
+< -- 102
++ -- 174
+- -- 50
+* -- 631
+:= -- 2102
+add.period$ -- 61
+call.type$ -- 20
+change.case$ -- 20
+chr.to.int$ -- 252
+cite$ -- 26
+duplicate$ -- 983
+empty$ -- 1139
+format.name$ -- 63
+if$ -- 3265
+int.to.chr$ -- 0
+int.to.str$ -- 20
+missing$ -- 167
+newline$ -- 117
+num.names$ -- 18
+pop$ -- 429
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 1062
+stack$ -- 0
+substring$ -- 608
+swap$ -- 761
+text.length$ -- 18
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 20
+warning$ -- 6
+while$ -- 54
+width$ -- 22
+write$ -- 234
+(There were 9 warnings)
