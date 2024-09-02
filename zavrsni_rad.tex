@@ -266,19 +266,11 @@ Izvadci iz:
 
 \section{Mjere uspješnosti}
 
-Za uspoređivanje znakovnih nizova najčešće korištena mjera uspješnosti je Leveinshteinova udaljenost koja bilježi broj potrebnih zamjena, brisanja ili umetanja znakova da bi se iz jednog niza dobio drugi. \cite{Levenshtein1965}
+Za uspoređivanje znakovnih nizova najčešće korištena mjera uspješnosti je \textbf{Leveinshteinova udaljenost} koja bilježi broj potrebnih zamjena, brisanja ili umetanja znakova da bi se iz jednog niza dobio drugi. \cite{Levenshtein1965}
 
-Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenosti ukupnim brojem znakova dobivamo stopu pogreške za znakove (eng. \textit{Character Error Rate}). 
+Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenosti ukupnim brojem znakova dobivamo \textbf{stopu pogreške za znakove} (eng. \textit{Character Error Rate}). 
 
-Stopa pogreške za riječi (eng. \textit{Word Error Rate}) dobiva se tretiranjem svake riječi kao najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, i dijeljenjem te udaljenosti s ukupnim borjem riječi.
-
-\subsection{Character Error Rate}
-
-Dobar rezultat ispod 1.0.
-
-\subsection{Word Error Rate}
-
-Dobar rezultat ispod 3.0.
+\textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se tretiranjem svake riječi kao najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, i dijeljenjem te udaljenosti s ukupnim borjem riječi.
 
 \section{F1?}
 
