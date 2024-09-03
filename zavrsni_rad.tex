@@ -255,36 +255,51 @@ Njegove glavne značajke su: \cite{Ocular}
 \chapter{Metodologija}
 \label{pog:metodologija}
 
+Ključan dio razvoja boljeg rješenja evaluacija je preciznosti Tesseracta i Oculara. U tu svrhu potreban je ispitni skup podataka prilagođen ograničenjima sustava. 
+
+Zatim treba prikupiti podatke za treniranje Oculara i namjestiti njegove hiperparametre da daju zadovoljavajuće rezultate, što će zapravo biti najznačajniji dio rada.
+
+
 \section{Ispitni skup podataka}
+
+Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe same klasifikacije teksta izabrani su već obrađeni dokumenti.
 
 Izvadci iz:
 \begin{itemize}
-	\item Fr. Jozo Garić, biskup – Korizmena okružnica (1932.)
-	\item Prof. dr. Antun Heinz – Nekoliko misli o definiciji i klasifikaciji plodova (1897.)
-	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)
+	\item Fra Jozo Garić, biskup – Korizmena okružnica (1932.)
+	\textcolor{red}{\item Prof. dr. Antun Heinz – Nekoliko misli o definiciji i klasifikaciji plodova (1897.)
+	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)}
 \end{itemize}
+
+Oba sustava imaju određena ograničenja na ulaze: 
+
+Ocular radi jedino s PDF dokumentima zastarjele verzije 1.4 te ih je stoga bilo potrebno pretvoriti u taj format. Za to je korišten Ghostscript, \cite{Ghostscript} slobodno dostupan alat otvorenog koda. 
+
+Tesseract pak radi jedino na slikama te je zato bilo potrebno ekstrahirati ih iz PDF-a prije prepoznavanje teksta. Ovdje je zgodno napomenuti da treba paziti da se prilikom pretvorbe ne smanji DPI rezolucija jer to ima poguban utjecaj na preciznost.
 
 \section{Mjere uspješnosti}
 
-Za uspoređivanje znakovnih nizova najčešće korištena mjera uspješnosti je \textbf{Leveinshteinova udaljenost} koja bilježi broj potrebnih zamjena, brisanja ili umetanja znakova da bi se iz jednog niza dobio drugi. \cite{Levenshtein1965}
+Za uspoređivanje znakovnih nizova najčešće korištena mjera uspješnosti je \textbf{Levenshteinova udaljenost} koja bilježi broj potrebnih zamjena, brisanja ili umetanja znakova da bi se iz jednog niza dobio drugi. \cite{Levenshtein1965}
 
-Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenosti ukupnim brojem znakova dobivamo \textbf{stopu pogreške za znakove} (eng. \textit{Character Error Rate}). 
+Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenosti ukupnim brojem znakova dobivamo \textbf{stopu pogreške za znakove} (eng. \textit{Character Error Rate}). Obično se dobrom vrijednošću smatra 1-2\%.
 
-\textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se tretiranjem svake riječi kao najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, i dijeljenjem te udaljenosti s ukupnim borjem riječi.
+\textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se uzimanjem riječi za najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, te dijeljenjem te udaljenosti s ukupnim brojem riječi.
 
-\section{F1?}
 
-\section{Recall?}
+\subsection{F1?}
+
+\subsection{Recall?}
 
 
 %-------------------------------------------------------------------------------
 \chapter{Optimizacija Oculara}
 \label{pog:optimizacija_oculara}
 
-\section{Jezični model}
+Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji izučava na temelju slika čiji će tekst kasnije prepoznavati.
 
-NB: Pretvoriti MB u broj riječi.
-Izvorno trenirano na 43MB tekstova javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. uz Šarićev prijevod Svetog Pisma (4MB) i još 3MB knjiga vjerske tematike.
+\section{Jezični model}
+                 
+Izvorno trenirano na tekstovima javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. (7.5 milijuna riječi) uz Šarićev prijevod Svetog Pisma (670k riječi) i još 11 knjiga vjerske tematike (500k riječi). Ukupan broj riječi od 8.7 milijuna usporediv je sa skupom podataka korištenim u izvornom radu. \cite{Berg2013}
 
 \bgroup
 \def\arraystretch{1.25}
@@ -299,7 +314,7 @@ Izvorno trenirano na 43MB tekstova javno dostupnih knjiga, poput djela Augusta �
 		3x3 & 50  & 50 & \textbf{1.06} & \textbf{2.76}   \\ \hline
 		3x3+2x2 & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
 	\end{tabular}
-	\caption{\textcolor{red}{Trebala bi ići u drugi odjeljak}}
+	\caption{\textcolor{red}{Trebala bi ići u drugi odjeljak za trening fonta}}
 	\label{tab:__________}
 \end{table}
 \egroup
