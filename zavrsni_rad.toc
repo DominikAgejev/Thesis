@@ -29,9 +29,9 @@
 \contentsline {subsection}{\numberline {6.2.2.}Recall?}{14}{subsection.6.2.2}%
 \contentsline {chapter}{\numberline {7.}Optimizacija Oculara}{15}{chapter.7}%
 \contentsline {section}{\numberline {7.1.}Jezični model}{15}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1.}Proširenje podacima van domene}{15}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2.}Proširenje nesavršenim podatcima}{15}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2.}Ispitivanje ortografskih značajki}{15}{section.7.2}%
+\contentsline {subsection}{\numberline {7.1.1.}Proširenje podacima van domene}{16}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2.}Proširenje nesavršenim podatcima}{16}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2.}Ispitivanje ortografskih značajki}{16}{section.7.2}%
 \contentsline {chapter}{\numberline {8.}Sinteza rješenja}{17}{chapter.8}%
 \contentsline {chapter}{\numberline {9.}Diskusija}{18}{chapter.9}%
 \contentsline {chapter}{\numberline {10.}Zaključak}{19}{chapter.10}%

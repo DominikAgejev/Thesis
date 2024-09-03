@@ -195,7 +195,7 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 \chapter{Tesseract}
 \label{pog:tesseract}
 
-Tesseract \cite{Smith2007} je najpoznatiji i najprecizniji slobodno dostupan OCR sustav opće namjene koji podržava i hrvatski jezik. Od Najnovija 5. inačica temeljena je na LSTM neuronskim mrežama kao i prethodna. U ovom poglavlju objasnit će se ugrubo proces prepoznavanja teksta prema zadanim postavkama.
+Tesseract \cite{Smith2007} je najpoznatiji i najprecizniji slobodno dostupan OCR sustav opće namjene koji podržava i hrvatski jezik, a od 4. inačice temeljen je na LSTM neuronskim mrežama. U ovom poglavlju objasnit će se ugrubo Tesseractov proces prepoznavanja teksta prema zadanim postavkama.
 
 \section{Predobrada}
 
@@ -298,8 +298,15 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji izučava na temelju slika čiji će tekst kasnije prepoznavati.
 
 \section{Jezični model}
-                 
-Izvorno trenirano na tekstovima javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. (7.5 milijuna riječi) uz Šarićev prijevod Svetog Pisma (670k riječi) i još 11 knjiga vjerske tematike (500k riječi). Ukupan broj riječi od 8.7 milijuna usporediv je sa skupom podataka korištenim u izvornom radu. \cite{Berg2013}
+
+Pri izgradnji skupa podataka za trening jezičnog modela najrelevantnije su dvije stavke: broj podataka i tematika teksta.
+
+U izvornom radu pokazano je kako model malo precizniji (4 WER postotna boda) na dokumentima čija je tematika pokrivena u jezičnom modelu. Budući da je sustav namijenjen starijim knjigama, od kojih je dobar dio vjerske tematike, uključeno je Sveto Pismo i druge duhovne knjige pored novijeg i starijeg štiva koje doprinosi većoj raznolikost izričaja i opsežnijem rječniku.
+\cite{Berg2013}
+
+\textcolor{red}{Izvorno} trenirano na tekstovima javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. (7.5 milijuna riječi) uz Šarićev prijevod Svetog Pisma (670k riječi) i još 11 knjiga vjerske tematike (500k riječi). 
+
+Ukupan broj riječi od 8.7 milijuna usporediv je sa skupom podataka korištenim u izvornom radu koji ih ima 10 milijuna. 
 
 \bgroup
 \def\arraystretch{1.25}
