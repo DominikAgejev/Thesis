@@ -10,54 +10,57 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 150 items from 100.
 Database file #1: library.bib
+Repeated entry---line 358 of file library.bib
+ : @misc{Leptonica
+ :                ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "Berg-Kirkpatrick2013"
-Warning--I didn't find a database entry for "Hassanein2015"
-Warning--I didn't find a database entry for "Ocular"
+Warning--I didn't find a database entry for "Levenshtein1965"
 Warning--empty journal in Fujitake2023
 Warning--empty journal in Olejniczak2022
 Warning--empty journal in Borovikov2014
+Warning--empty journal in Hassanein2015
+Warning--empty year in Hassanein2015
 Warning--empty journal in Wick2018
-Warning--empty journal in Berg2013
-Warning--empty journal in Berg2014
-You've used 20 entries,
+You've used 23 entries,
             4225 wiz_defined-function locations,
-            979 strings with 11737 characters,
-and the built_in function-call counts, 13791 in all, are:
-= -- 1067
-> -- 299
+            991 strings with 12147 characters,
+and the built_in function-call counts, 14965 in all, are:
+= -- 1138
+> -- 327
 < -- 102
-+ -- 174
-- -- 50
-* -- 631
-:= -- 2102
-add.period$ -- 61
-call.type$ -- 20
-change.case$ -- 20
++ -- 188
+- -- 56
+* -- 678
+:= -- 2276
+add.period$ -- 67
+call.type$ -- 23
+change.case$ -- 23
 chr.to.int$ -- 252
-cite$ -- 26
-duplicate$ -- 983
-empty$ -- 1139
-format.name$ -- 63
-if$ -- 3265
+cite$ -- 29
+duplicate$ -- 1079
+empty$ -- 1263
+format.name$ -- 71
+if$ -- 3539
 int.to.chr$ -- 0
-int.to.str$ -- 20
-missing$ -- 167
-newline$ -- 117
-num.names$ -- 18
-pop$ -- 429
+int.to.str$ -- 23
+missing$ -- 193
+newline$ -- 134
+num.names$ -- 19
+pop$ -- 522
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1062
+skip$ -- 1147
 stack$ -- 0
-substring$ -- 608
-swap$ -- 761
+substring$ -- 611
+swap$ -- 815
 text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 20
+type$ -- 23
 warning$ -- 6
-while$ -- 54
-width$ -- 22
-write$ -- 234
-(There were 9 warnings)
+while$ -- 55
+width$ -- 25
+write$ -- 262
+(There was 1 error message)

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  3 SEP 2024 18:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  5 SEP 2024 22:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -844,7 +844,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}]
-<hr_0036537505_73.pdf, id=161, 598.235pt x 845.1575pt>
+<hr_0036537505_73.pdf, id=173, 598.235pt x 845.1575pt>
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf>
 Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 67.
@@ -853,7 +853,7 @@ File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf>
 Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 67.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
-<hr_0036537505_73.pdf, id=164, page=1, 598.235pt x 845.1575pt>
+<hr_0036537505_73.pdf, id=176, page=1, 598.235pt x 845.1575pt>
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
 Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 67.
@@ -891,7 +891,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.27 ...{6.2.}Mjere uspje≈°nosti}{14}{section.6.2}
+l.26 ...er}{\numberline {5.}Ocular}{12}{chapter.5}
                                                   % [1
 
 
@@ -929,22 +929,13 @@ LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
 (Font)              scaled to size 16.0pt on input line 131.
 [5
 
-]
-
-LaTeX Warning: Citation `Hassanein2015' on page 6 undefined on input line 144.
-
-[6] [7]
+] [6] [7]
 Poglavlje 3..
 LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line
  174.
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
-)
-
-LaTeX Warning: Citation `Berg-Kirkpatrick2013' on page 8 undefined on input lin
-e 186.
-
-[8
+) [8
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}]
 Poglavlje 4..
@@ -952,93 +943,107 @@ Poglavlje 4..
 
 ]
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 2
-28.
+27.
  (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [10{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [11
 ]
 Poglavlje 5..
-
-LaTeX Warning: Citation `Ocular' on page 12 undefined on input line 244.
-
 [12
 
 ]
 Poglavlje 6..
+<Figures/korizmena.png, id=344, 411.5375pt x 267.49937pt>
+File: Figures/korizmena.png Graphic file (type png)
+<use Figures/korizmena.png>
+Package pdftex.def Info: Figures/korizmena.png  used on input line 280.
+(pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
 
-LaTeX Warning: Citation `Ghostscript' on page 13 undefined on input line 276.
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Figures/summa.png, id=346, 411.5375pt x 267.49937pt>
+File: Figures/summa.png Graphic file (type png)
+<use Figures/summa.png>
+Package pdftex.def Info: Figures/summa.png  used on input line 287.
+(pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+LaTeX Warning: Citation `Levenshtein1965' on page 13 undefined on input line 30
+0.
 
 [13
 
-]
-Overfull \hbox (3.93384pt too wide) in paragraph at lines 284--285
+] [14 <./Figures/korizmena.png> <./Figures/summa.png>]
+Overfull \hbox (3.93384pt too wide) in paragraph at lines 302--303
 []\T1/stix2/m/n/12 Budu¢i da ta mjera ovisi o du-ljini tek-sta, di-je-lje-njem 
 Le-ven-sh-te-inove uda-lje-nosti ukup-
  []
 
-[14]
+[15]
 Poglavlje 7..
-[15
+[16
 
-] [16]
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[17] [18]
 Poglavlje 8..
-[17
+[19
 
 ]
 Poglavlje 9..
-[18
+[20
 
 ]
 Poglavlje 10..
+(./zavrsni_rad.bbl [21
 
-Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 412.
+] [22
 
-(./zavrsni_rad.bbl [19
+] [23]) [24] [25
 
-] [20
-
-] [21]) [22] [23
-
-] [24
+] [26
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.448 \chapter{The Code}
+l.505 \chapter{The Code}
                         
 Privitak A.
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
-[25
+[27
 
 
 ]
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 451.
+(blindtext)                 on input line 508.
 
-[26] (./zavrsni_rad.aux)
+[28] (./zavrsni_rad.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -1160,6 +1165,8 @@ hr_0036537505_73.pdf    Graphic file (type pdf)
 hr_0036537505_73.pdf    Graphic file (type pdf)
 ts1stix2.fd    2018/04/02 v2.0.0-latex stix2 TS1 font definitions
   t1cmtt.fd    2023/04/13 v2.5m Standard LaTeX font definitions
+Figures/korizmena.png
+Figures/summa.png
 zavrsni_rad.bbl
  ***********
 
@@ -1167,16 +1174,16 @@ zavrsni_rad.bbl
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `zavrsni_rad.out' has not changed.
-(rerunfilecheck)             Checksum: B1D3FE0E8ABC8F018C2C71ACDA9CDB99;4800.
+(rerunfilecheck)             Checksum: E1ABE26703C81A8D6389B21435523DB9;5112.
  ) 
 Here is how much of TeX's memory you used:
- 19956 strings out of 474503
- 303831 string characters out of 5756704
- 1946043 words of memory out of 5000000
- 41509 multiletter control sequences out of 15000+600000
- 653098 words of font info for 142 fonts, out of 8000000 for 9000
+ 19995 strings out of 474503
+ 304519 string characters out of 5756704
+ 1945043 words of memory out of 5000000
+ 41537 multiletter control sequences out of 15000+600000
+ 660799 words of font info for 143 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,17n,131p,771b,1564s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,131p,771b,1565s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb><
 c:/texlive/2023/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><
 c:/texlive/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><c
@@ -1184,10 +1191,10 @@ c:/texlive/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><c
 c:/texlive/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb
 ><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on zavrsni_rad.pdf (29 pages, 591636 bytes).
+Output written on zavrsni_rad.pdf (31 pages, 948143 bytes).
 PDF statistics:
- 478 PDF objects out of 1000 (max. 8388607)
- 419 compressed objects within 5 object streams
- 97 named destinations out of 1000 (max. 500000)
- 325 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 524 PDF objects out of 1000 (max. 8388607)
+ 459 compressed objects within 5 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 359 words of extra memory for PDF output out of 10000 (max. 10000000)
 

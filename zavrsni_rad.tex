@@ -147,7 +147,7 @@ Cilj ispravljanja nagnuća zaokrenuti je retke teksta tako da su vodoravni. Utvr
 
 \section{Izdvajanje značajki}
 
-\textcolor{red}{\textit{Neuralne mreže se koriste i za izdvajanje značajki, što sad s organizacijom poglavlja? \newline prof. Hrkać: Ništa, možete samo spomenuti da su starije metode koristile ručno definirane značajke (npr. tzv. Granlundove koeficijente) dok se kod današnjih metoda značajke uče, pa se izdvajanje značajki obavlja u sklopu iste neuronske mreže koja se koristi i za klasifikaciju (raniji slojevi izdvajaju (naučene) značajke, dok završni sloj provodi klasifikaciju). Dakle bit će vrlo kratko podpoglavlje :).}}
+Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno definirane značajke (poput tzv. Granlundovih opisnika temeljenih na Fourierovoj transformaciji) \cite{Trier1996} dok u suvremenim sustavima poput Tesseracta raniji slojevi neuronske mreže izdvajaju značajke
 
 \section{Klasifikacijske arhitekture}
 
@@ -183,7 +183,7 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 
 \section{Pregled literature}
 
-\cite{Berg-Kirkpatrick2013}
+\cite{Berg2013}
 \cite{Springmann2014}
 \cite{Christy2017}
 \cite{Wick2018}
@@ -209,7 +209,7 @@ Za slike koje nisu više-manje dvobojne nego pate od većih nejednakosti u osvij
 
 \subsection{Eliminacija šuma}
 
-Razlučivši pozadinu od ostatka slijedi brisanje šuma, tj. smetnji poput prolivene tinte. To se postiže pronalaskom spojenih piksela te usporedbom karakteristika nakupine s tipičnim karakteristikama teksta.
+Razlučivši pozadinu od ostatka prelazi se na brisanje šuma poput razlivene tinte. To se postiže pronalaskom spojenih piksela te usporedbom karakteristika nakupine s tipičnim karakteristikama teksta.
 
 Tijekom analize razmatra se: \cite{Tesseract}
 
@@ -224,13 +224,17 @@ Tijekom analize razmatra se: \cite{Tesseract}
 \subsection{Analiza uređenja stranice}
 
 \begin{description}
-	\item[Line Detection] \hfill Tesseract uses Leptonica to find and remove rule/separator lines in the input image. This helps to separate text from graphical elements like tables or forms.
-	\item[Photo Region Detection] \hfill The \texttt{FindImages} function from Leptonica is used to detect photo regions in the input. This allows Tesseract to distinguish between text and image areas.
-	\item[Connected Component Analysis] \hfill This step identifies individual characters or character fragments. It is performed by the \texttt{find\_components} function, which scans the binary image pixel by pixel, labels connected black pixels, and groups them into connected components representing potential characters or parts of characters.
-	\item[Orientation and Script Detection] \hfill If enabled, Tesseract analyzes the layout to detect text orientation and script. This is particularly useful for documents that may contain text in multiple orientations or scripts.
-	\item[Column Detection] \hfill If \texttt{PSM\_COL\_FIND\_ENABLED} is true for the selected page segmentation mode, Tesseract attempts to divide the image into columns. This is crucial for correctly processing multi-column documents.
-	\item[Text Line Formation] \hfill Tesseract analyzes the spatial relationships between connected components to detect text lines and words. This step uses statistical approaches based on the spacing between components.
+	\item[Detekcija slika] \hfill \\ Funkcijom \texttt{FindImages} Tesseract pronalazi slike koje potom zanemaruje prilikom prepoznavanja teksta.
+	\item[Detekcija crta] \hfill \\ Tesseract rabi Leptonicu za pronalaženje i uklanjanje crta, odnosno razdjelnih linija, na ulaznoj slici što pomaže u odvajanju teksta od grafičkih elemenata poput tablica ili obrazaca.
+	\item[Analiza povezanih komponenti] \hfill \\ Ovaj korak izvodi funkcija \texttt{find\_components} koja skenira binarnu sliku piksel po piksel, označava povezane crne piksele i grupira ih u povezane komponente koje predstavljaju potencijalne znakove ili dijelove znakova.
+	\item[Detekcija orijentacije i pisma] \hfill \\ Ako je ova opcija omogućena, Tesseract će provjeriti o kojem je pismu riječ (latinično, kinesko, ...) i u kojem smjeru se piše (kineski se npr. može pisati odozgo prema dolje ili zdesna na lijevo).
+	\item[Detekcija stupaca] \hfill \\ Koristi se ako je tekst pisan u stupcima poput novinskog članka ili znanstvenog rada.
+	\item[Pronalazak redaka teksta] \hfill \\ Tesseract analizira prostorne odnose između povezanih komponenti kako bi detektirao linije teksta. Ovaj korak koristi statistički pristup temeljen na razmacima između komponenti.
 \end{description}
+
+\section{Klasifikacija}
+
+\section{Naknadna obrada}
 
 \cite{Breuel2013} o LSTM-u
 
@@ -262,14 +266,28 @@ Zatim treba prikupiti podatke za treniranje Oculara i namjestiti njegove hiperpa
 
 \section{Ispitni skup podataka}
 
-Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe same klasifikacije teksta izabrani su već obrađeni dokumenti.
+Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe same klasifikacije teksta izabrani su već obrađeni dokumenti:
 
-Izvadci iz:
 \begin{itemize}
 	\item Fra Jozo Garić, biskup – Korizmena okružnica (1932.)
-	\textcolor{red}{\item Prof. dr. Antun Heinz – Nekoliko misli o definiciji i klasifikaciji plodova (1897.)
-	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)}
+	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)
 \end{itemize}
+
+Korizmena okružnica korištena je za većinu ispitivanja, a \textit{Summa} je izabrana za isprobavanje ortografskih mogućnosti te kao primjer teškog ulaza za sustav.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Figures/korizmena.png} 
+	\caption{Izvadak iz \textit{Korizmene okružnice}}
+	\label{slk:korizmena}
+\end{figure}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Figures/summa.png} 
+	\caption{Izvadak iz \textit{Summe nauka christianskoga}}
+	\label{slk:summa}
+\end{figure}
 
 Oba sustava imaju određena ograničenja na ulaze: 
 
@@ -295,41 +313,51 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 \chapter{Optimizacija Oculara}
 \label{pog:optimizacija_oculara}
 
-Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji izučava na temelju slika čiji će tekst kasnije prepoznavati.
+Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji se gradi na temelju slika čiji će tekst kasnije prepoznavati.
 
 \section{Jezični model}
 
 Pri izgradnji skupa podataka za trening jezičnog modela najrelevantnije su dvije stavke: broj podataka i tematika teksta.
 
-U izvornom radu pokazano je kako model malo precizniji (4 WER postotna boda) na dokumentima čija je tematika pokrivena u jezičnom modelu. Budući da je sustav namijenjen starijim knjigama, od kojih je dobar dio vjerske tematike, uključeno je Sveto Pismo i druge duhovne knjige pored novijeg i starijeg štiva koje doprinosi većoj raznolikost izričaja i opsežnijem rječniku.
+U izvornom radu pokazano je kako model malo precizniji (4 WER postotna boda) na dokumentima čija je tematika pokrivena u jezičnom modelu. Budući da je sustav namijenjen starijim knjigama, od kojih je dobar dio vjerske tematike, uključeno je Sveto Pismo i druge duhovne knjige pored novijeg i starijeg štiva koje doprinosi većoj raznolikosti izričaja i opsežnijem rječniku.
 \cite{Berg2013}
 
-\textcolor{red}{Izvorno} trenirano na tekstovima javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. (7.5 milijuna riječi) uz Šarićev prijevod Svetog Pisma (670k riječi) i još 11 knjiga vjerske tematike (500k riječi). 
+U daljnjim eksperimentima korišten je jezični model treniran na tekstovima javno dostupnih knjiga, poput djela Augusta Šenoe, Marije Jurić-Zagorke, Charlesa Dickensa i sl. (7.5 milijuna riječi) uz Šarićev prijevod Svetog Pisma (670k riječi) i još 11 knjiga vjerske tematike (500k riječi). 
 
-Ukupan broj riječi od 8.7 milijuna usporediv je sa skupom podataka korištenim u izvornom radu koji ih ima 10 milijuna. 
+Ukupan broj riječi odabranog skupa podataka od 8.7 milijuna usporediv je sa skupom podataka korištenim u izvornom radu koji ih ima 10 milijuna.
+
+\subsection{Veličina skupa podataka}
+
+Ispitani su i podskupi odabranog ali i veći skupovi podataka, temeljeni na prethodno navedenom uz dva tipa proširenja: stranom i domaćom beletristikom (11.6 milijuna riječi) te tekstovima vjerske tematike (6 milijuna riječi).
+
+Tekstovi vjerskih knjiga nisu bili lektorirani nego nesavršeni proizvodi prepoznavanja teksta, a uključeni su svejedno kako bi se ispitalo doprinosi li kvantiteta potencijalno više od kvalitete ako greške nisu značajne.
+
+Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na tekstovima s dotad manjom preciznošću prepoznavanja, kao što je \textit{Summa nauka christianskoga}, međutim, ni smanjenje ni povećanje skupa podataka nije dovelo do poboljšanja u preciznosti, a proširenje je značajno usporilo trening i transkripciju.
 
 \bgroup
 \def\arraystretch{1.25}
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|c|c|c|c|c|}
+	\begin{tabular}{|c|c|c|c|}
 		\hline
-		\multirow{2}{*}{\textbf{Iteracije treninga}} & \multicolumn{2}{|c|}{\textbf{Veličina snopa}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{CER}}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{WER}}} \\ \cline{2-3}
-		
-		& \textbf{Trening}  & \textbf{Transkripcija}  & \multicolumn{1}{|c|}{}  & \multicolumn{1}{|c|}{}  \\ \hline
-		3x3    & 10    & 10 &  2.03 & 3.58  \\ \hline
-		3x3 & 50  & 50 & \textbf{1.06} & \textbf{2.76}   \\ \hline
-		3x3+2x2 & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
+		\textbf{Ispitivani dokument} & \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
+		Korizmena okružnica & Izvorni & 1.06 & 2.76 \\ \hline
+		Korizmena okružnica & Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
+		Summa nauka christianskoga & Izvorni & 25.41 & 68.71 \\ \hline
+		Summa nauka christianskoga & Izvorni + OCR vjerskih knjiga & 24.05 & 65.99 \\ \hline
 	\end{tabular}
-	\caption{\textcolor{red}{Trebala bi ići u drugi odjeljak za trening fonta}}
-	\label{tab:__________}
+	\caption{Usporedba uspješnosti jezičnih modela}
+	\label{tab:lm_performance}
 \end{table}
 \egroup
 
+Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za Korizmenu okružnicu.
 
-\subsection{Proširenje podacima van domene}
+\subsection{Veličina snopa}
 
-\subsection{Proširenje nesavršenim podatcima}
+S obzirom na to da veći jezični model podrazumijeva više mogućih kombinacija riječi, povećanje snopa ispitivanih riječi u Markovljevom modelu postaje potencijalno presudno kako bi točna riječ bila pronađena.
+
+Ipak, kako je vidljivo iz donje tablice \ref{tab:7.2}, povećanje snopa nije dovelo do poboljšanja niti pri treningu modela fonta niti prilikom transkripcije.
 
 \bgroup
 \def\arraystretch{1.25}
@@ -345,12 +373,38 @@ Ukupan broj riječi od 8.7 milijuna usporediv je sa skupom podataka korištenim 
 		120 & 50 & 2.21 & 5.04 \\ \hline        
 		120 & 120 & 2.29 & 5.78 \\ \hline                                             
 	\end{tabular}
-	\caption{\textcolor{red}{dd}}
-	\label{tab:_________2}
+	\caption{Usporedba uspješnosti prema veličini snopa}
+	\label{tab:7.2}
 \end{table}
 \egroup
 
-\section{Ispitivanje ortografskih značajki}
+Rezultati impliciraju kako je bolje ne ispraviti prepoznati znakovni niz ako predloženi ispravak nije među prvima predložen. To može biti do grešaka u skupu podataka za jezični model, gdje veći snop obuhvati i rijetke pogrešne, ali slične nizove ispravljanome. 
+
+S druge strane, može biti posljedica inherentnog ograničenja stohastičkog modela. Tomu u prilog ide, primjerice, zamjena rijetkog niza \texttt{vjere:}, koji se vjerojatno nije nalazio u skupu podataka, riječju \texttt{vjetar}. 
+
+\section{Model znakovlja}
+
+Lorem ipsum
+
+\bgroup
+\def\arraystretch{1.25}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|c|}
+		\hline
+		\multirow{2}{*}{\textbf{Iteracije treninga}} & \multicolumn{2}{|c|}{\textbf{Veličina snopa}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{CER}}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{WER}}} \\ \cline{2-3}
+		
+		& \textbf{Trening}  & \textbf{Transkripcija}  & \multicolumn{1}{|c|}{}  & \multicolumn{1}{|c|}{}  \\ \hline
+		3x3    & 10    & 10 &  2.03 & 3.58  \\ \hline
+		3x3 & 50  & 50 & \textbf{1.06} & \textbf{2.76}   \\ \hline
+		3x3+2x2 & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
+	\end{tabular}
+	\caption{\textcolor{red}{Lorem ipsum}}
+	\label{tab:__________}
+\end{table}
+\egroup
+
+\section{Ispitivanje ortografskih mogućnosti/značajki}
 
 
 %-------------------------------------------------------------------------------
@@ -395,20 +449,23 @@ Algoritam glasanja čita redak po redak Tesseractov ispis i traži odgovarajući
 \end{table}
 \egroup
 
-Ideje za nadogradnje: počeci i krajevi redaka su obično Ocularu kritični. Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba.
+
 
 %-------------------------------------------------------------------------------
 \chapter{Diskusija}
 \label{pog:diskusija}
 
-Komentirati konvergenciju računalnog vida, neuralnih mreža, NLP-a i OCR-a.
+Ideje za nadogradnje: počeci i krajevi redaka su obično Ocularu kritični. Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba.
+
+Ograničenja Oculara - brzina, CUDA (java)
 
 
 %--- ZAKLJUČAK / CONCLUSION ----------------------------------------------------
 \chapter{Zaključak}
 \label{pog:zakljucak}
 
-\blindtext
+Komentirati konvergenciju računalnog vida, neuralnih mreža, NLP-a i OCR-a.
+
 
 
 %--- LITERATURA / REFERENCES ---------------------------------------------------

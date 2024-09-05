@@ -82,6 +82,24 @@ B.~Su, S.~Lu, i C.~L. Tan, ``Robust document image binarization technique for
 \BIBentrySTDinterwordspacing
 \BIBentrySTDinterwordspacing
 
+\bibitem{Hassanein2015}
+A.~S. Hassanein, S.~Mohammad, M.~Sameer, i M.~E. Ragab, ``A survey on hough
+  transform, theory, techniques and applications''.
+
+\bibitem{Trier1996}
+\BIBentryALTinterwordspacing
+Øivind Due~Trier, A.~K. Jain, i T.~Taxt, ``Feature extraction methods for
+  character recognition-a survey'', \emph{Pattern Recognition}, sv.~29, str.
+  641--662, 4 1996. \url{https://doi.org/10.1016/0031-3203(95)00118-2}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Berg2013}
+\BIBentryALTinterwordspacing
+T.~Berg-Kirkpatrick, G.~Durrett, i D.~Klein, ``Unsupervised transcription of
+  historical documents'', str. 207--217, 2013. [Mre\v zno]. Adresa:
+  \url{https://aclanthology.org/P13-1021/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Springmann2014}
 \BIBentryALTinterwordspacing
 U.~Springmann, D.~Najock, H.~Morgenroth, H.~Schmid, A.~Gotscharek, i F.~Fink,
@@ -132,7 +150,8 @@ J.~Sauvola, T.~Seppanen, S.~Haapakoski, i M.~Pietikainen, ``Adaptive document
 
 \bibitem{Tesseract}
 \BIBentryALTinterwordspacing
-``Tesseract open source ocr engine (main repository)''. [Mre\v zno]. Adresa:
+``tesseract-ocr/tesseract: Tesseract open source ocr engine (main
+  repository)''. [Mre\v zno]. Adresa:
   \url{https://github.com/tesseract-ocr/tesseract/}
 \BIBentrySTDinterwordspacing
 
@@ -144,20 +163,21 @@ T.~M. Breuel, A.~Ul-Hasan, M.~A. Al-Azawi, i F.~Shafait, ``High-performance ocr
   str. 683--687, 2013. \url{https://doi.org/10.1109/ICDAR.2013.140}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Berg2013}
+\bibitem{Berg2014}
 \BIBentryALTinterwordspacing
-T.~Berg-Kirkpatrick, G.~Durrett, i D.~Klein, ``Unsupervised transcription of
-  historical documents'', str. 207--217, 2013. [Mre\v zno]. Adresa:
-  \url{https://aclanthology.org/P13-1021/}
+T.~Berg-Kirkpatrick i D.~Klein, ``Improved typesetting models for historical
+  ocr'', str. 118--123, 2014. \url{https://doi.org/10.3115/v1/P14-2020}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Berg2014}
-T.~Berg-Kirkpatrick i D.~Klein, ``Improved typesetting models for historical
-  ocr'', str. 118--123, 2014.
+\bibitem{Ocular}
+\BIBentryALTinterwordspacing
+``tberg12/ocular: Ocular is a state-of-the-art historical ocr system.''. [Mre\v
+  zno]. Adresa: \url{https://github.com/tberg12/ocular/}
+\BIBentrySTDinterwordspacing
 
-\bibitem{Levenshtein1965}
-V.~I. Levenshtein, ``Binary codes capable of correcting deletions, insertions,
-  and reversals'', \emph{Doklady Akademii Nauk SSSR}, sv. 163, str. 845--848,
-  1965.
+\bibitem{Ghostscript}
+\BIBentryALTinterwordspacing
+``Ghostscript''. [Mre\v zno]. Adresa: \url{https://www.ghostscript.com/}
+\BIBentrySTDinterwordspacing
 
 \end{thebibliography}
