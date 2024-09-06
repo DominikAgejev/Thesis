@@ -137,6 +137,13 @@ Predobrada se odnosi na postupak prilagodbe ulazne slike radi uspješnijeg raspo
 
 Cilj binarizacije razlučivanje je između teksta i pozadine. Najjednostavniji način za to postavljanje je praga (eng. \textit{thresholding}) za koji su svi pikseli s RGB ili sivotonskim (eng. \textit{grayscale}) vrijednostima nižim od praga obojani crno, tj. označeni kao tekst, a pikseli iznad praga označeni kao pozadina. \cite{Jyotsna2016}
 
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Figures/binarization.png} 
+	\caption{Primjer binarizacije \cite{binarization-image}}
+	\label{slk:binarizacija}
+\end{figure}
+
 Razlikujemo globalne i lokalne metode binarizacije. Globalne, poput često korištene Otsuove  metode \cite{Otsu1979}, postavljaju jedan prag za cijeli dokument, što je vremenski učinkovito i uspješno u idealnom slučaju s jednoličnom pozadinom, no zakazuje pri nejednakom osvjetljenju ili sjeni uslijed loše skeniranog pregiba knjige. Lokalne, poput metode adaptivnog kontrasta \cite{Su2013}, temeljenoj na prepoznavanju rubova pomoću kontrasta susjednih piksela, nešto su resursno zahtjevnije, ali zato daju bolje rezultate. \cite{Otsu1979, Su2013}
 
 \subsection{Ispravljanje nagnuća}
@@ -145,23 +152,44 @@ Cilj ispravljanja nagnuća zaokrenuti je retke teksta tako da su vodoravni. Utvr
 
 \section{Segmentacija}
 
+Segmentacija podrazumijeva razlučivanje semantički značajne dijelove slike od kojih su najbitniji retci, riječi i znakovi te koji se obično tim redom i pronalaze: retci u slici, riječi u retku, znakovi u riječi.
+
+Najjednostavnija metoda segmentacije gradi histogram piksela teksta te postavlja granice između elemenata gdje ima najviše piksela pozadine.
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Figures/line-segmentation.png} 
+	\caption{Linijska segmentacija histogramom}
+	\label{slk:histogram}
+\end{figure}
+
 \section{Izdvajanje značajki}
 
-Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno definirane značajke (poput tzv. Granlundovih opisnika temeljenih na Fourierovoj transformaciji) \cite{Trier1996} dok u suvremenim sustavima poput Tesseracta raniji slojevi neuronske mreže izdvajaju značajke
+Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno definirane značajke (poput tzv. Granlundovih opisnika temeljenih na Fourierovoj transformaciji ili jednostavnih matrica koje predstavljaju oblik znaka) \cite{Trier1996} dok u suvremenim sustavima poput Tesseracta raniji slojevi neuronske mreže izdvajaju značajke, a kasniji provode klasifikaciju teksta.
 
-\section{Klasifikacijske arhitekture}
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Figures/simple-letter-matrix.png} 
+	\caption{Izdvajanje matrice značajki slova \texttt{A} \cite{Noaman2015}}
+	\label{slk:jednostavna-matrica}
+\end{figure}
 
-\subsection{Usporedba predložaka}
 
-\subsection{CNN}
+\section{Klasifikacija}
 
-\subsection{RNN}
+Klasifikacija je najbitniji dio procesa i može se zvati prepoznavanjem teksta u užem smislu. 
 
-\subsection{LSTM}
+Klasifikacijske arhitekture: Usporedba predložaka, CNN, RNN, LSTM
 
-\textit{long short-term memory} (\textit{LSTM})
+
 
 \section{Naknadna obrada}
+
+Naknadna obrada podrazumijeva metode koje djeluju na klasificirani tekst. Najčešće korištena metoda naknadne obrade jest ispravljanje riječi pomoću jezičnog modela jer značajno povećava preciznost.
+
+Također se mogu uspoređivati rezultati različitih klasifikatora ili čak više iteracija istog klasifikatora, odlučujući na temelju glasanja koja je riječ vjerojatnija ili pak uspoređujući stupnjeve pouzdanosti transkripcije ako ih klasifikatori podržavaju.
+
+Osim toga, ako se prilikom faze segmentacije nisu razlučivali retci nego izravno znakovi, može se naknadno utvrditi hijerarhijski odnos teksta na slici u ovoj fazi.
 
 \textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
 
@@ -182,6 +210,8 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 
 
 \section{Pregled literature}
+
+\blindtext
 
 \cite{Berg2013}
 \cite{Springmann2014}
@@ -227,23 +257,27 @@ Tijekom analize razmatra se: \cite{Tesseract}
 	\item[Detekcija slika] \hfill \\ Funkcijom \texttt{FindImages} Tesseract pronalazi slike koje potom zanemaruje prilikom prepoznavanja teksta.
 	\item[Detekcija crta] \hfill \\ Tesseract rabi Leptonicu za pronalaženje i uklanjanje crta, odnosno razdjelnih linija, na ulaznoj slici što pomaže u odvajanju teksta od grafičkih elemenata poput tablica ili obrazaca.
 	\item[Analiza povezanih komponenti] \hfill \\ Ovaj korak izvodi funkcija \texttt{find\_components} koja skenira binarnu sliku piksel po piksel, označava povezane crne piksele i grupira ih u povezane komponente koje predstavljaju potencijalne znakove ili dijelove znakova.
-	\item[Detekcija orijentacije i pisma] \hfill \\ Ako je ova opcija omogućena, Tesseract će provjeriti o kojem je pismu riječ (latinično, kinesko, ...) i u kojem smjeru se piše (kineski se npr. može pisati odozgo prema dolje ili zdesna na lijevo).
+	\item[Detekcija orijentacije i pisma] \hfill \\ Ako je ova opcija omogućena, Tesseract će provjeriti o kojem je pismu riječ (latinično, kinesko,...) i u kojem smjeru se piše (kineski se npr. može pisati odozgo prema dolje ili zdesna na lijevo).
 	\item[Detekcija stupaca] \hfill \\ Koristi se ako je tekst pisan u stupcima poput novinskog članka ili znanstvenog rada.
 	\item[Pronalazak redaka teksta] \hfill \\ Tesseract analizira prostorne odnose između povezanih komponenti kako bi detektirao linije teksta. Ovaj korak koristi statistički pristup temeljen na razmacima između komponenti.
 \end{description}
 
 \section{Klasifikacija}
 
+\textit{long short-term memory} (\textit{LSTM})
+\cite{Breuel2013} o LSTM-u
+
 \section{Naknadna obrada}
 
-\cite{Breuel2013} o LSTM-u
+
+
 
 
 %-------------------------------------------------------------------------------
 \chapter{Ocular}
 \label{pog:ocular}
 
-Ocular \cite{Berg2013} je sustav za optičko raspoznavanje teksta razvijena specifično za rad s povijesnim dokumentima, i koji je, kada je izdan i svojevremeno unaprjeđen \cite{Berg2014}, bio vrhunac tehnologije za to područje (eng. \textit{state-of-the-art}).
+Ocular \cite{Berg2013} je sustav za optičko raspoznavanje teksta razvijen specifično za rad s povijesnim dokumentima, i koji je, kada je izdan i svojevremeno unaprjeđen \cite{Berg2014}, bio vrhunac tehnologije za to područje (eng. \textit{state-of-the-art}).
 
 Njegove glavne značajke su: \cite{Ocular}
 
@@ -254,6 +288,18 @@ Njegove glavne značajke su: \cite{Ocular}
 	\item Nenadzirano učenje ortografskih varijacija uslijed arhaičnog pravopisa.
 	\item Istovremen ispis doslovnog teksta i normaliziranog oblika (prilagođenog standardnom jezku).
 \end{itemize}
+
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.35\linewidth]{Figures/letter-matrix.png} 
+	\caption{Matrica vjerojatnosti za slovo \texttt{n}}
+	\label{slk:matrica}
+\end{figure}
+
+
+
+Objasniti veličinu snopa
 
 %-------------------------------------------------------------------------------
 \chapter{Metodologija}
@@ -304,11 +350,6 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 \textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se uzimanjem riječi za najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, te dijeljenjem te udaljenosti s ukupnim brojem riječi.
 
 
-\subsection{F1?}
-
-\subsection{Recall?}
-
-
 %-------------------------------------------------------------------------------
 \chapter{Optimizacija Oculara}
 \label{pog:optimizacija_oculara}
@@ -343,7 +384,7 @@ Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na teksto
 		\textbf{Ispitivani dokument} & \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
 		Korizmena okružnica & Izvorni & 1.06 & 2.76 \\ \hline
 		Korizmena okružnica & Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
-		Summa nauka christianskoga & Izvorni & 25.41 & 68.71 \\ \hline
+		\textcolor{red}{Summa nauka christianskoga} & Izvorni & 25.41 & 68.71 \\ \hline
 		Summa nauka christianskoga & Izvorni + OCR vjerskih knjiga & 24.05 & 65.99 \\ \hline
 	\end{tabular}
 	\caption{Usporedba uspješnosti jezičnih modela}
@@ -351,11 +392,11 @@ Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na teksto
 \end{table}
 \egroup
 
-Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za Korizmenu okružnicu.
+Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za \textit{Korizmenu okružnicu}.
 
 \subsection{Veličina snopa}
 
-S obzirom na to da veći jezični model podrazumijeva više mogućih kombinacija riječi, povećanje snopa ispitivanih riječi u Markovljevom modelu postaje potencijalno presudno kako bi točna riječ bila pronađena.
+S obzirom na to da veći jezični model podrazumijeva više mogućih kombinacija riječi, povećanje snopa ispitivanih riječi u skrivenom Markovljevom modelu postaje potencijalno presudno kako bi točna riječ bila pronađena.
 
 Ipak, kako je vidljivo iz donje tablice \ref{tab:7.2}, povećanje snopa nije dovelo do poboljšanja niti pri treningu modela fonta niti prilikom transkripcije.
 
@@ -404,14 +445,14 @@ Lorem ipsum
 \end{table}
 \egroup
 
-\section{Ispitivanje ortografskih mogućnosti/značajki}
+\section{Ispitivanje ortografskih mogućnosti}
 
 
 %-------------------------------------------------------------------------------
 \chapter{Sinteza rješenja}
 \label{pog:sinteza_rješenja}
 
-Budući da je izuzev ispuštanja određenih redaka Ocular točniji od Tesseracta, kako je utvrđeno u prethodnom poglavlju, ovdje predlažemo jednostavan sustav glasanja kojim je Ocularova manjkavost otklonjena bez gubitka preciznosti.
+Budući da je izuzev ispuštanja određenih redaka Ocular točniji od Tesseracta ovdje se predlaže jednostavan sustav glasanja kojim je Ocularova manjkavost otklonjena bez gubitka preciznosti.
 
 Algoritam glasanja čita redak po redak Tesseractov ispis i traži odgovarajući redak Ocularovog ispisa na temelju sličnosti izračunate pomoću Levenshteinove udaljenosti. Ako pronađe dovoljno sličan redak odabire ga kao izlaz, inače preferira Tesseractov ispis.
 
@@ -431,6 +472,8 @@ Algoritam glasanja čita redak po redak Tesseractov ispis i traži odgovarajući
 	\caption{Algoritam glasanja predstavljen Python kodom}
 	\label{fig:python_code}
 \end{figure}
+
+Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \ref{tab:system_performance}
 
 \bgroup
 \def\arraystretch{1.25}
