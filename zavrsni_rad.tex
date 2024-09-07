@@ -2,7 +2,7 @@
 % Dodaj opciju upload za generiranje konačne verzije koja se učitava na FERWeb
 % Add the option upload to generate the final version which is uploaded to FERWeb
 
-
+\usepackage{float}
 \usepackage{blindtext}
 \usepackage{xcolor}
 \usepackage{listings}
@@ -26,6 +26,7 @@
 
 \usepackage{changepage} % For adjusting margins
 \usepackage{multirow}
+\usepackage{multicol}
 
 % \usepackage[section]{placeins} % To prevent figures from going into the next section
 \usepackage{placeins} % For FloatBarrier
@@ -41,6 +42,8 @@
 
 \usepackage{enumitem}
 \setlist[itemize]{noitemsep}
+
+\usepackage[justification=centering]{caption}
 
 %--- PODACI O RADU / THESIS INFORMATION ----------------------------------------
 
@@ -230,6 +233,13 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 	\item Istrošenost i oštećenja papira
 \end{itemize}
 
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Figures/historical-issues.png} 
+	\caption{Isječci povijesnih dokumenta s (a) nepoznatim fontom, \\ (b) neravnim tiskom, te (c) viškom tinte. \cite{Berg2013}}
+	\label{slk:historical-issues}
+\end{figure}
+
 \section{Pregled literature}
 
 \cite{Berg2013}
@@ -312,7 +322,7 @@ U \ref{pog:ocr_uvod} poglavlju spomenuta je klasifikacijska metoda uspoređivanj
 
 Ocular nadilazi tu poteškoću gradeći model znakovlja dinamički, tj. po potrebi za svaki dokument, te ne uspoređuje ulazni znak izravno s predloškom, već na temelju naučenog modela, uzimajući u obzir kontekst, nagnuće teksta, količinu tinte i šum, generira znak koji potom uspoređuje s ulaznim znakom.
 
-To postiže četirima generativnim probabilističkim modelima koji predstavljaju aspekte procesa tiskanja: jezični model, slovoslagarski ili tipografski model, model tinte te model šuma.
+To postiže četirima generativnim probabilističkim modelima koji predstavljaju aspekte procesa tiskanja: jezični model, slovoslagarski ili tipografski model, koji uključuje model tinte, te model šuma.
 
 Međuovisnosti ulaza i modela određuje sljedeća formula, \cite{Berg2013} gdje \textit{E} predstavlja tekst, \textit{X} piksele ulazne slike, \textit{T} raspored znakova na slici, a \textit{R} aspekte otiskivanja tinte:
 
@@ -334,9 +344,24 @@ Jezični model jest Kneser-Neyev uglađeni znakovni \textit{n}-gramski model \ci
 
 \section{Slovoslagarski model}
 
+\begin{multicols}{2}
+	
+	% First column
+	Tekst
+	
+	
+	% Second column
+	\columnbreak
+	\begin{figure}[H]
+		\centering
+		\includegraphics[width=0.9\linewidth]{Figures/typesetting-model.png} 
+		\caption{\cite{Berg2013}}
+		\label{fig:typesetting-model}
+	\end{figure}
+	
+\end{multicols}
 
-
-\section{Model tinte}
+\subsection{Model tinte}
 
 
 
@@ -344,12 +369,7 @@ Jezični model jest Kneser-Neyev uglađeni znakovni \textit{n}-gramski model \ci
 
 
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=0.35\linewidth]{Figures/letter-matrix.png} 
-	\caption{Matrica vjerojatnosti za slovo \texttt{n}}
-	\label{slk:matrica}
-\end{figure}
+
 
 
 
@@ -483,9 +503,24 @@ S druge strane, može biti posljedica inherentnog ograničenja stohastičkog mod
 
 \section{Model znakovlja}
 
-Budući da se Ocularova klasifikacija zasniva na usporedbi znakova s predlošcima u obliku matrica vjerojatnosti, ključno je te predloške dobro izgraditi.
+\begin{multicols}{2}
+	
+Budući da se Ocularova klasifikacija zasniva na generiranju znakova na temelju modela znaka opisanog matricom vjerojatnosti, \ref{slk:matrica} ključno je te vjerojatnosti pomno odrediti.
 
 Rezultati ispitivanja optimalnog broja faza treninga modela fonta vidljivi su u tablici \ref{tab:7.3}  Suprotno očekivanjima, ponovno treniranje na prve dvije stranice nije povećalo preciznost.
+
+	\columnbreak
+	
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\linewidth]{Figures/letter-matrix.png} 
+	\caption{Matrica vjerojatnosti za slovo \texttt{n}. Svaki kružić predstavlja vjerojatnost da je piksel zacrnjen.}
+	\label{slk:matrica}
+\end{figure}
+
+\end{multicols}
+
+
 
 \bgroup
 \def\arraystretch{1.25}
