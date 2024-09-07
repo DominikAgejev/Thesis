@@ -20,6 +20,10 @@
 \contentsline {section}{\numberline {4.2.}Klasifikacija}{13}{section.4.2}%
 \contentsline {section}{\numberline {4.3.}Naknadna obrada}{13}{section.4.3}%
 \contentsline {chapter}{\numberline {5.}Ocular}{14}{chapter.5}%
+\contentsline {section}{\numberline {5.1.}Jezični model}{15}{section.5.1}%
+\contentsline {section}{\numberline {5.2.}Slovoslagarski model}{15}{section.5.2}%
+\contentsline {section}{\numberline {5.3.}Model tinte}{15}{section.5.3}%
+\contentsline {section}{\numberline {5.4.}Model šuma}{15}{section.5.4}%
 \contentsline {chapter}{\numberline {6.}Metodologija}{16}{chapter.6}%
 \contentsline {section}{\numberline {6.1.}Ispitni skup podataka}{16}{section.6.1}%
 \contentsline {section}{\numberline {6.2.}Mjere uspješnosti}{18}{section.6.2}%

@@ -112,6 +112,15 @@ T.~Wang, D.~J. Wu, A.~Coates, i A.~Y. Ng, ``End-to-end text recognition with
   \url{https://ieeexplore.ieee.org/document/6460871}
 \BIBentrySTDinterwordspacing
 
+\bibitem{Elagouni2014}
+\BIBentryALTinterwordspacing
+K.~Elagouni, C.~Garcia, F.~Mamalet, i P.~Sébillot, ``Text recognition in
+  multimedia documents: A study of two neural-based ocrs using and avoiding
+  character segmentation'', \emph{International Journal on Document Analysis
+  and Recognition}, sv.~17, str. 19--31, 3 2014.
+  \url{https://doi.org/10.1007/S10032-013-0202-7}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Dharmale2023}
 \BIBentryALTinterwordspacing
 G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,

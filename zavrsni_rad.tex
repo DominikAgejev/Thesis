@@ -39,6 +39,8 @@
 	\futurelet \reserved@a \@xhline
 }
 
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep}
 
 %--- PODACI O RADU / THESIS INFORMATION ----------------------------------------
 
@@ -111,7 +113,7 @@ Nadalje, zbog suviše uske primjene, specifični problemi, poput predmeta ovog r
 
 U okviru ovog rada najprije se uvodi u područje, metode i temeljne pojmove koji će se koristiti u radu. Zatim je detaljno izložen zadatak i njegove specifičnosti uz pregled dosadašnjih postignuća unutar područja.
 
-Prelazeći na izvedbu rješenja, razmatraju se najznačajniji slobodno dostupni OCR alati prikladni zadatku, a to su Tesseract \cite{Smith2007}, OCR sustav opće namjene koji održava Google, te Ocular \cite{Berg-Kirkpatrick2013}, razvijen specifično za primjenu na antikvarnim dokumentima.
+Prelazeći na izvedbu rješenja, razmatraju se najznačajniji slobodno dostupni OCR alati prikladni zadatku, a to su Tesseract \cite{Smith2007}, OCR sustav opće namjene koji održava Google, te Ocular \cite{Berg2013}, razvijen specifično za primjenu na antikvarnim dokumentima.
 
 Nakon treniranja i optimiziranja hiperparametara Oculara, uspoređen je s Tesseractom na već predobrađenim ispitnim podacima gdje se pokazuje da usprkos starijoj arhitekturi u bitnome nadjačava Tesseract, ali uz određena ograničenja.
 
@@ -228,8 +230,6 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 	\item Istrošenost i oštećenja papira
 \end{itemize}
 
-
-
 \section{Pregled literature}
 
 \cite{Berg2013}
@@ -296,7 +296,7 @@ Tijekom analize razmatra se: \cite{Tesseract}
 \chapter{Ocular}
 \label{pog:ocular}
 
-Ocular \cite{Berg2013} je sustav za optičko raspoznavanje teksta razvijen specifično za rad s povijesnim dokumentima, i koji je, kada je izdan i svojevremeno unaprjeđen \cite{Berg2014}, bio vrhunac tehnologije za to područje (eng. \textit{state-of-the-art}).
+Ocular \cite{Berg2013} je sustav za optičko raspoznavanje teksta razvijen specifično za nenadziranu transkripciju povijesnih dokumenata, i koji je, kada je izdan i svojevremeno unaprijeđen \cite{Berg2014}, bio vrhunac tehnologije za to područje (eng. \textit{state-of-the-art}).
 
 Njegove glavne značajke su: \cite{Ocular}
 
@@ -308,6 +308,41 @@ Njegove glavne značajke su: \cite{Ocular}
 	\item Istovremen ispis doslovnog teksta i normaliziranog oblika (prilagođenog standardnom jezku).
 \end{itemize}
 
+U \ref{pog:ocr_uvod} poglavlju spomenuta je klasifikacijska metoda uspoređivanja predložaka čiji je glavni nedostatak neprilagodljivost na različita znakovlja.
+
+Ocular nadilazi tu poteškoću gradeći model znakovlja dinamički, tj. po potrebi za svaki dokument, te ne uspoređuje ulazni znak izravno s predloškom, već na temelju naučenog modela, uzimajući u obzir kontekst, nagnuće teksta, količinu tinte i šum, generira znak koji potom uspoređuje s ulaznim znakom.
+
+To postiže četirima generativnim probabilističkim modelima koji predstavljaju aspekte procesa tiskanja: jezični model, slovoslagarski ili tipografski model, model tinte te model šuma.
+
+Međuovisnosti ulaza i modela određuje sljedeća formula, \cite{Berg2013} gdje \textit{E} predstavlja tekst, \textit{X} piksele ulazne slike, \textit{T} raspored znakova na slici, a \textit{R} aspekte otiskivanja tinte:
+
+\[
+\begin{aligned}
+	P(E, T, R, X) &= P(E) & \text{[Jezični model]} \\
+	&\cdot P(T | E) & \text{[Slovoslagarski model]} \\
+	&\cdot P(R) & \text{[Model tinte]} \\
+	&\cdot P(X | E, T, R) & \text{[Model šuma]}
+\end{aligned}
+\]
+
+\section{Jezični model}
+
+Jezični model jest Kneser-Neyev uglađeni znakovni \textit{n}-gramski model \cite{Kneser1995} koji se uči na korpusu teksta u ciljnom jeziku. Specifičnost ovog modela, koja ga razlikuje od uobičajenih NLP modela, je da nema zaustavni znak, nego tretira cijeli redak kao jednu cjelinu, sadržavala ona jednu rečenicu ili pak više njih.
+
+\textcolor{red}{Objasniti veličinu snopa} \cite{Berg2014}
+
+
+\section{Slovoslagarski model}
+
+
+
+\section{Model tinte}
+
+
+
+\section{Model šuma}
+
+
 
 \begin{figure}[hbt]
 	\centering
@@ -318,12 +353,9 @@ Njegove glavne značajke su: \cite{Ocular}
 
 
 
-Objasniti veličinu snopa
 
 
-Glavna manjkavost ovog pristupa (uspoređivanja predložaka)osjetljivost je na promjenu fonta te šumove poput prelijevanja tinte prilikom tiska.
 
-Ocular, sustav koji razmatramo u ovom radu, nadilazi te poteškoće gradeći model fonta dinamički, tj. po potrebi za svaki zadatak, te stohastičkim metodama
 
 %-------------------------------------------------------------------------------
 \chapter{Metodologija}
