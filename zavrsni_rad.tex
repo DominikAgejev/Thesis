@@ -27,6 +27,19 @@
 \usepackage{changepage} % For adjusting margins
 \usepackage{multirow}
 
+% \usepackage[section]{placeins} % To prevent figures from going into the next section
+\usepackage{placeins} % For FloatBarrier
+
+% Define a thicker table line
+\usepackage{array}
+
+\makeatletter
+\newcommand{\thickhline}{%
+	\noalign {\ifnum 0=`}\fi \hrule height 1pt
+	\futurelet \reserved@a \@xhline
+}
+
+
 %--- PODACI O RADU / THESIS INFORMATION ----------------------------------------
 
 % Naslov na engleskom jeziku / Title in English
@@ -382,10 +395,10 @@ Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na teksto
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		\textbf{Ispitivani dokument} & \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
-		Korizmena okružnica & Izvorni & 1.06 & 2.76 \\ \hline
-		Korizmena okružnica & Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
-		\textcolor{red}{Summa nauka christianskoga} & Izvorni & 25.41 & 68.71 \\ \hline
-		Summa nauka christianskoga & Izvorni + OCR vjerskih knjiga & 24.05 & 65.99 \\ \hline
+		\multirow{2}{*}{Korizmena okružnica} & Izvorni & 1.05 & 2.74 \\ \cline{2-4}
+		 & Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
+		\multirow{2}{*}{Summa nauka christianskoga} & Izvorni & 17.67 & 66.79 \\ \cline{2-4}
+		 & Izvorni + OCR vjerskih knjiga & 16.52 & 64.64 \\ \hline
 	\end{tabular}
 	\caption{Usporedba uspješnosti jezičnih modela}
 	\label{tab:lm_performance}
@@ -409,7 +422,9 @@ Ipak, kako je vidljivo iz donje tablice \ref{tab:7.2}, povećanje snopa nije dov
 		\multicolumn{2}{|c|}{\textbf{Veličina snopa}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{CER}}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{WER}}} \\ \cline{1-2}
 		
 		\textbf{Trening}  & \textbf{Transkripcija}  & \multicolumn{1}{|c|}{}  & \multicolumn{1}{|c|}{}  \\ \hline
+		10  & 10 &  2.03 & 3.58  \\ \hline
 		40 & 40 &  1.59 & 3.64   \\ \hline
+		50 & 50 &  \textbf{1.05} & \textbf{2.74}   \\ \hline
 		40 & 120 & 1.81 & 3.77   \\ \hline
 		120 & 50 & 2.21 & 5.04 \\ \hline        
 		120 & 120 & 2.29 & 5.78 \\ \hline                                             
@@ -425,7 +440,9 @@ S druge strane, može biti posljedica inherentnog ograničenja stohastičkog mod
 
 \section{Model znakovlja}
 
-Lorem ipsum
+Budući da se Ocularova klasifikacija zasniva na usporedbi znakova s predlošcima u obliku matrica vjerojatnosti, ključno je te predloške dobro izgraditi.
+
+Rezultati ispitivanja optimalnog broja faza treninga modela fonta vidljivi su u tablici \ref{tab:7.3}  Suprotno očekivanjima, ponovno treniranje na prve dvije stranice nije povećalo preciznost.
 
 \bgroup
 \def\arraystretch{1.25}
@@ -433,20 +450,44 @@ Lorem ipsum
 	\centering
 	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		\multirow{2}{*}{\textbf{Iteracije treninga}} & \multicolumn{2}{|c|}{\textbf{Veličina snopa}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{CER}}} & \multicolumn{1}{|c|}{\multirow{2}{*}{\textbf{WER}}} \\ \cline{2-3}
+		\multirow{2}{*}{\textbf{Iteracije treninga}} & \multicolumn{2}{c|}{\textbf{Veličina snopa}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{CER}}} & \multicolumn{1}{c|}{\multirow{2}{*}{\textbf{WER}}} \\ \cline{2-3}
 		
-		& \textbf{Trening}  & \textbf{Transkripcija}  & \multicolumn{1}{|c|}{}  & \multicolumn{1}{|c|}{}  \\ \hline
-		3x3    & 10    & 10 &  2.03 & 3.58  \\ \hline
-		3x3 & 50  & 50 & \textbf{1.06} & \textbf{2.76}   \\ \hline
-		3x3+2x2 & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
+		& \textbf{Trening}  & \textbf{Transkripcija}  & \multicolumn{1}{c|}{}  & \multicolumn{1}{c|}{}  \\ \hline
+		\multirow{2}{*}{3x3 stranice} & 10 & 10 & 2.03 & 3.58  \\ \cline{2-5}
+		 		& 50  & 50 & \textbf{1.05} & \textbf{2.74}   \\ \hline
+		3x3 str. + 2x2 str. & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
 	\end{tabular}
 	\caption{\textcolor{red}{Lorem ipsum}}
-	\label{tab:__________}
+	\label{tab:7.3}
 \end{table}
 \egroup
 
+
+Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su prošle dodatne dvije iteracije treninga, a na drugoj se povećava. \ref{tab:pages5and6} Radi se o razlici od nekoliko znakova te se stoga ne može zaključiti poboljšava li se barem uspješnost na dotreniranim stranicama kao kod školskog primjera prenaučenosti.
+
+
+\bgroup
+\def\arraystretch{1.25}
+\begin{table}[hbt]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Ispitivana stranica} & \textbf{Model znakovlja} & \textbf{CER} & \textbf{WER} \\ \hline
+		\multirow{2}{*}{str. 5.} & 3x3 & \textbf{0.73} & \textbf{1.49} \\ \cline{2-4}
+								 & 3x3+2x2 & 1.20 & 3.08 \\ \hline
+		\multirow{2}{*}{str. 6.} & 3x3 & 1.17 & 3.16 \\ \cline{2-4}
+								 & 3x3+2x2 & \textbf{0.95} & \textbf{1.46} \\ \hline
+	\end{tabular}
+	\caption{}
+	\label{tab:pages5and6}
+\end{table}
+\egroup
+
+\FloatBarrier
+
 \section{Ispitivanje ortografskih mogućnosti}
 
+Lorem ipsum
 
 %-------------------------------------------------------------------------------
 \chapter{Sinteza rješenja}
@@ -482,8 +523,8 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 	\begin{tabular}{|c|c|c|c|}
 		\hline
 		\textbf{OCR sustav} & \textbf{Pojedinosti} & \textbf{CER} & \textbf{WER} \\ \hline
-		Ocular & & 8.83 & 10.94 \\ \hline
-		Ocular & Zanemareni retci s CER>20 & 1.06 & 2.76 \\ \hline
+		\multirow{2}{*}{Ocular} & & 8.83 & 10.94 \\ \cline{2-4}
+								& Zanemareni retci s CER>20 & 1.05 & 2.74 \\ \hline
 		Tesseract & & 1.52 & 3.77 \\ \hline
 		Predložen sustav & & \textbf{0.96} & \textbf{2.48} \\ \hline
 	\end{tabular}
