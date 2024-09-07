@@ -10,37 +10,37 @@
 \contentsline {section}{\numberline {2.3.}Izdvajanje značajki}{7}{section.2.3}%
 \contentsline {section}{\numberline {2.4.}Klasifikacija}{7}{section.2.4}%
 \contentsline {section}{\numberline {2.5.}Naknadna obrada}{8}{section.2.5}%
-\contentsline {chapter}{\numberline {3.}OCR starijih tekstova}{9}{chapter.3}%
-\contentsline {section}{\numberline {3.1.}Pregled literature}{9}{section.3.1}%
-\contentsline {chapter}{\numberline {4.}Tesseract}{10}{chapter.4}%
-\contentsline {section}{\numberline {4.1.}Predobrada}{10}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1.}Binarizacija}{10}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2.}Eliminacija šuma}{10}{subsection.4.1.2}%
-\contentsline {subsection}{\numberline {4.1.3.}Analiza uređenja stranice}{11}{subsection.4.1.3}%
-\contentsline {section}{\numberline {4.2.}Klasifikacija}{12}{section.4.2}%
-\contentsline {section}{\numberline {4.3.}Naknadna obrada}{12}{section.4.3}%
-\contentsline {chapter}{\numberline {5.}Ocular}{13}{chapter.5}%
-\contentsline {chapter}{\numberline {6.}Metodologija}{15}{chapter.6}%
-\contentsline {section}{\numberline {6.1.}Ispitni skup podataka}{15}{section.6.1}%
-\contentsline {section}{\numberline {6.2.}Mjere uspješnosti}{17}{section.6.2}%
-\contentsline {chapter}{\numberline {7.}Optimizacija Oculara}{18}{chapter.7}%
-\contentsline {section}{\numberline {7.1.}Jezični model}{18}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1.}Veličina skupa podataka}{18}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2.}Veličina snopa}{19}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2.}Model znakovlja}{20}{section.7.2}%
-\contentsline {section}{\numberline {7.3.}Ispitivanje ortografskih mogućnosti}{21}{section.7.3}%
-\contentsline {chapter}{\numberline {8.}Sinteza rješenja}{22}{chapter.8}%
-\contentsline {chapter}{\numberline {9.}Diskusija}{23}{chapter.9}%
-\contentsline {chapter}{\numberline {10.}Zaključak}{24}{chapter.10}%
-\contentsline {chapter}{Literatura}{25}{chapter*.14}%
+\contentsline {chapter}{\numberline {3.}OCR starijih tekstova}{10}{chapter.3}%
+\contentsline {section}{\numberline {3.1.}Pregled literature}{10}{section.3.1}%
+\contentsline {chapter}{\numberline {4.}Tesseract}{11}{chapter.4}%
+\contentsline {section}{\numberline {4.1.}Predobrada}{11}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1.}Binarizacija}{11}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2.}Eliminacija šuma}{11}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3.}Analiza uređenja stranice}{12}{subsection.4.1.3}%
+\contentsline {section}{\numberline {4.2.}Klasifikacija}{13}{section.4.2}%
+\contentsline {section}{\numberline {4.3.}Naknadna obrada}{13}{section.4.3}%
+\contentsline {chapter}{\numberline {5.}Ocular}{14}{chapter.5}%
+\contentsline {chapter}{\numberline {6.}Metodologija}{16}{chapter.6}%
+\contentsline {section}{\numberline {6.1.}Ispitni skup podataka}{16}{section.6.1}%
+\contentsline {section}{\numberline {6.2.}Mjere uspješnosti}{18}{section.6.2}%
+\contentsline {chapter}{\numberline {7.}Optimizacija Oculara}{19}{chapter.7}%
+\contentsline {section}{\numberline {7.1.}Jezični model}{19}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1.}Veličina skupa podataka}{20}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2.}Veličina snopa}{20}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2.}Model znakovlja}{21}{section.7.2}%
+\contentsline {section}{\numberline {7.3.}Ispitivanje ortografskih mogućnosti}{22}{section.7.3}%
+\contentsline {chapter}{\numberline {8.}Sinteza rješenja}{23}{chapter.8}%
+\contentsline {chapter}{\numberline {9.}Diskusija}{24}{chapter.9}%
+\contentsline {chapter}{\numberline {10.}Zaključak}{25}{chapter.10}%
+\contentsline {chapter}{Literatura}{26}{chapter*.15}%
 \babel@toc {croatian}{}\relax 
-\contentsline {chapter}{Sa\v {z}etak}{28}{chapter*.15}%
+\contentsline {chapter}{Sa\v {z}etak}{30}{chapter*.16}%
 \babel@toc {croatian}{}\relax 
 \babel@toc {croatian}{}\relax 
-\babel@toc {croatian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{29}{chapter*.16}%
 \babel@toc {croatian}{}\relax 
 \babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{31}{chapter*.17}%
 \babel@toc {croatian}{}\relax 
-\contentsline {chapter}{\numberline {A:}The Code}{30}{chapter.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{\numberline {A:}The Code}{32}{chapter.1}%

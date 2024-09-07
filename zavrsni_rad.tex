@@ -190,10 +190,20 @@ Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno de
 
 \section{Klasifikacija}
 
-Klasifikacija je najbitniji dio procesa i može se zvati prepoznavanjem teksta u užem smislu. 
+Klasifikacija je najbitniji dio procesa i može se zvati prepoznavanjem teksta u užem smislu. U početku su se OCR sustavi za klasifikaciju oslanjali na uspoređivanje znakova s unaprijed pripremljenim predlošcima (eng. \textit{template matching}), međutim, glavna manjkavost ovog pristupa osjetljivost je na promjenu fonta te šumove poput prelijevanja tinte prilikom tiska, osim očite potrebe za dodatnim ručnim radom.
 
-Klasifikacijske arhitekture: Usporedba predložaka, CNN, RNN, LSTM
+Razvojem i širenjem neuronskih mreža one preuzimaju ujedno i izdvajanje značajki i njihovu klasifikaciju. Budući da neuronske mreže mogu, bez potrebe za ljudskim radom, u svojim težinama spremiti značajke na više razina apstrakcije, i, što je još bitnije, više samih značajki, nego li ljudi mogu ručno pretočiti u stroju razumljiv zapis, brzo su iskorijenile starije klasifikacijske arhitekture. \cite{Wang2012}
 
+ \textcolor{red}{CNN, RNN, LSTM, Transformeri}
+
+Združivanjem konvolucijskih i povratnih neuoronskih slojeva dobivamo arhitekturu modernog klasifikatora kao na donjoj slici \ref{slk:crnn}.
+
+\begin{figure}[hbt]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Figures/CRNN-architecture.jpeg} 
+	\caption{CRNN arhitektura \cite{Dharmale2023}}
+	\label{slk:crnn}
+\end{figure}
 
 
 \section{Naknadna obrada}
@@ -203,8 +213,6 @@ Naknadna obrada podrazumijeva metode koje djeluju na klasificirani tekst. Najče
 Također se mogu uspoređivati rezultati različitih klasifikatora ili čak više iteracija istog klasifikatora, odlučujući na temelju glasanja koja je riječ vjerojatnija ili pak uspoređujući stupnjeve pouzdanosti transkripcije ako ih klasifikatori podržavaju.
 
 Osim toga, ako se prilikom faze segmentacije nisu razlučivali retci nego izravno znakovi, može se naknadno utvrditi hijerarhijski odnos teksta na slici u ovoj fazi.
-
-\textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
 
 %-------------------------------------------------------------------------------
 \chapter{OCR starijih tekstova}
@@ -223,8 +231,6 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 
 
 \section{Pregled literature}
-
-\blindtext
 
 \cite{Berg2013}
 \cite{Springmann2014}
@@ -314,6 +320,11 @@ Njegove glavne značajke su: \cite{Ocular}
 
 Objasniti veličinu snopa
 
+
+Glavna manjkavost ovog pristupa (uspoređivanja predložaka)osjetljivost je na promjenu fonta te šumove poput prelijevanja tinte prilikom tiska.
+
+Ocular, sustav koji razmatramo u ovom radu, nadilazi te poteškoće gradeći model fonta dinamički, tj. po potrebi za svaki zadatak, te stohastičkim metodama
+
 %-------------------------------------------------------------------------------
 \chapter{Metodologija}
 \label{pog:metodologija}
@@ -367,7 +378,7 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 \chapter{Optimizacija Oculara}
 \label{pog:optimizacija_oculara}
 
-Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji se gradi na temelju slika čiji će tekst kasnije prepoznavati.
+Za razliku od Tesseracta, Ocular nije univerzalno primjenjiv za različite jezike i znakovlja već je potrebno naučiti jezični model, za koji je potreban korpus teksta na ciljnom jeziku, te model fonta, koji se gradi na temelju slika čiji će tekst kasnije prepoznavati. U ovom poglavlju, koje predstavlja i glavni dio rada, provest će se optimizacija Ocularovih hiperparametara.
 
 \section{Jezični model}
 
@@ -487,7 +498,7 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 
 \section{Ispitivanje ortografskih mogućnosti}
 
-Lorem ipsum
+\textcolor{red}{Rad na Summi. Loši rezultati i malo podataka. Spominjati ili ne?}
 
 %-------------------------------------------------------------------------------
 \chapter{Sinteza rješenja}
@@ -542,6 +553,8 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 Ideje za nadogradnje: počeci i krajevi redaka su obično Ocularu kritični. Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba.
 
 Ograničenja Oculara - brzina, CUDA (java)
+
+\textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
 
 
 %--- ZAKLJUČAK / CONCLUSION ----------------------------------------------------

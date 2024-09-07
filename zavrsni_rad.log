@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  7 SEP 2024 14:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  7 SEP 2024 21:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -904,7 +904,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.26 ...e {7.}Optimizacija Oculara}{18}{chapter.7}
+l.26 ...e {7.}Optimizacija Oculara}{19}{chapter.7}
                                                   % [1
 
 
@@ -967,127 +967,130 @@ LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
 (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [7{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Fi
-gures/line-segmentation.png> <./Figures/simple-letter-matrix.png>] [8]
+gures/line-segmentation.png> <./Figures/simple-letter-matrix.png>]
+<Figures/CRNN-architecture.jpeg, id=283, 1280.785pt x 1324.95pt>
+File: Figures/CRNN-architecture.jpeg Graphic file (type jpg)
+<use Figures/CRNN-architecture.jpeg>
+Package pdftex.def Info: Figures/CRNN-architecture.jpeg  used on input line 203
+.
+(pdftex.def)             Requested size: 308.71106pt x 319.34904pt.
+ [8 <./Figures/CRNN-architecture.jpeg>]
+[9]
 Poglavlje 3..
 LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line
- 215.
+ 223.
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
-)
-
-Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 228.
-
-[9
+) [10
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}]
 Poglavlje 4..
-[10
+[11
 
-] [11] [12]
+] [12] [13]
 Poglavlje 5..
-<Figures/letter-matrix.png, id=329, 259.97125pt x 376.40625pt>
+<Figures/letter-matrix.png, id=341, 259.97125pt x 376.40625pt>
 File: Figures/letter-matrix.png Graphic file (type png)
 <use Figures/letter-matrix.png>
-Package pdftex.def Info: Figures/letter-matrix.png  used on input line 308.
+Package pdftex.def Info: Figures/letter-matrix.png  used on input line 314.
 (pdftex.def)             Requested size: 154.35889pt x 223.49065pt.
-[13
+[14
 
-] [14 <./Figures/letter-matrix.png>]
+] [15 <./Figures/letter-matrix.png>]
 Poglavlje 6..
-<Figures/korizmena.png, id=342, 411.5375pt x 267.49937pt>
+<Figures/korizmena.png, id=354, 411.5375pt x 267.49937pt>
 File: Figures/korizmena.png Graphic file (type png)
 <use Figures/korizmena.png>
-Package pdftex.def Info: Figures/korizmena.png  used on input line 339.
+Package pdftex.def Info: Figures/korizmena.png  used on input line 350.
 (pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/summa.png, id=343, 411.5375pt x 267.49937pt>
+<Figures/summa.png, id=355, 411.5375pt x 267.49937pt>
 File: Figures/summa.png Graphic file (type png)
 <use Figures/summa.png>
-Package pdftex.def Info: Figures/summa.png  used on input line 346.
+Package pdftex.def Info: Figures/summa.png  used on input line 357.
 (pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[15
+[16
 
-] [16 <./Figures/korizmena.png> <./Figures/summa.png>]
-Overfull \hbox (3.93384pt too wide) in paragraph at lines 361--362
+] [17 <./Figures/korizmena.png> <./Figures/summa.png>]
+Overfull \hbox (3.93384pt too wide) in paragraph at lines 372--373
 []\T1/stix2/m/n/12 Budu¢i da ta mjera ovisi o du-ljini tek-sta, di-je-lje-njem 
 Le-ven-sh-te-inove uda-lje-nosti ukup-
  []
 
-[17]
+[18]
 Poglavlje 7..
-[18
+[19
 
 ]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[19]
-Overfull \hbox (2.22592pt too wide) in paragraph at lines 443--444
+[20]
+Overfull \hbox (2.22592pt too wide) in paragraph at lines 454--455
 \T1/stix2/m/n/12 Budu¢i da se Ocu-la-rova kla-si-fi-ka-cija zas-niva na us-po-r
 edbi zna-kova s pred-lo²-cima u obliku
  []
 
-[20] [21]
+[21] [22]
 Poglavlje 8..
-[22
-
-]
-Poglavlje 9..
 [23
 
 ]
+Poglavlje 9..
+[24
+
+]
 Poglavlje 10..
-(./zavrsni_rad.bbl [24
+(./zavrsni_rad.bbl [25
 
-] [25
+] [26
 
-] [26]) [27] [28
+] [27] [28]) [29] [30
 
-] [29
+] [31
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.589 \chapter{The Code}
+l.602 \chapter{The Code}
                         
 Privitak A.
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
-[30
+[32
 
 
 ]
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 592.
+(blindtext)                 on input line 605.
 
-[31] (./zavrsni_rad.aux)
+[33] (./zavrsni_rad.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -1213,6 +1216,7 @@ Figures/binarization.png
 Figures/line-segmentation.png
 Figures/simple-letter-matrix.png
   t1cmtt.fd    2023/04/13 v2.5m Standard LaTeX font definitions
+Figures/CRNN-architecture.jpeg
 ts1stix2.fd    2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 Figures/letter-matrix.png
 Figures/korizmena.png
@@ -1224,13 +1228,13 @@ zavrsni_rad.bbl
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `zavrsni_rad.out' has not changed.
-(rerunfilecheck)             Checksum: F0683A0DAF1618B6161EF070E968855E;4414.
+(rerunfilecheck)             Checksum: F3CD88E662C46FCBB3053DE7572A5A3F;4414.
  ) 
 Here is how much of TeX's memory you used:
- 20130 strings out of 474503
- 307322 string characters out of 5756704
+ 20147 strings out of 474503
+ 307728 string characters out of 5756704
  1946043 words of memory out of 5000000
- 41660 multiletter control sequences out of 15000+600000
+ 41672 multiletter control sequences out of 15000+600000
  661113 words of font info for 144 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,17n,131p,771b,1563s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -1242,10 +1246,10 @@ c:/texlive/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb
 ><c:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texli
 ve/2023/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2023/te
 xmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on zavrsni_rad.pdf (34 pages, 1448624 bytes).
+Output written on zavrsni_rad.pdf (36 pages, 1954647 bytes).
 PDF statistics:
- 538 PDF objects out of 1000 (max. 8388607)
- 458 compressed objects within 5 object streams
- 113 named destinations out of 1000 (max. 500000)
- 331 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 558 PDF objects out of 1000 (max. 8388607)
+ 474 compressed objects within 5 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 336 words of extra memory for PDF output out of 10000 (max. 10000000)
 

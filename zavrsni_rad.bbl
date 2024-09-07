@@ -103,6 +103,23 @@ A.~S. Hassanein, S.~Mohammad, M.~Sameer, i M.~E. Ragab, ``A survey on hough
 K.~M.~G. Noaman, J.~A.~M. Saif, i I.~A.~A. Alqubati, ``Optical character
   recognition based on genetic algorithms'', 2015.
 
+\bibitem{Wang2012}
+\BIBentryALTinterwordspacing
+T.~Wang, D.~J. Wu, A.~Coates, i A.~Y. Ng, ``End-to-end text recognition with
+  convolutional neural networks'', u \emph{Proceedings of the 21st
+  International Conference on Pattern Recognition (ICPR2012)}, 2012., str.
+  3304--3308. [Mre\v zno]. Adresa:
+  \url{https://ieeexplore.ieee.org/document/6460871}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Dharmale2023}
+\BIBentryALTinterwordspacing
+G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,
+  ``Remicare—medicine intake tracker and healthcare assistant'',
+  \emph{Lecture Notes in Networks and Systems}, sv. 540, str. 273--283, 2023.
+  \url{https://doi.org/10.1007/978-981-19-6088-8_25}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Berg2013}
 \BIBentryALTinterwordspacing
 T.~Berg-Kirkpatrick, G.~Durrett, i D.~Klein, ``Unsupervised transcription of

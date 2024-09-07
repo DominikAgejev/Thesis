@@ -10,7 +10,7 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 150 items from 100.
 Database file #1: library.bib
-Repeated entry---line 358 of file library.bib
+Repeated entry---line 354 of file library.bib
  : @misc{Leptonica
  :                ,
 I'm skipping whatever remains of this entry
@@ -22,45 +22,45 @@ Warning--empty journal in Hassanein2015
 Warning--empty year in Hassanein2015
 Warning--empty journal in Noaman2015
 Warning--empty journal in Wick2018
-You've used 26 entries,
+You've used 28 entries,
             4225 wiz_defined-function locations,
-            1004 strings with 12549 characters,
-and the built_in function-call counts, 16447 in all, are:
-= -- 1248
-> -- 352
-< -- 111
-+ -- 203
-- -- 60
-* -- 739
-:= -- 2505
-add.period$ -- 75
-call.type$ -- 26
-change.case$ -- 26
-chr.to.int$ -- 273
-cite$ -- 33
-duplicate$ -- 1196
-empty$ -- 1398
-format.name$ -- 76
-if$ -- 3893
+            1021 strings with 13135 characters,
+and the built_in function-call counts, 18476 in all, are:
+= -- 1408
+> -- 406
+< -- 130
++ -- 235
+- -- 69
+* -- 838
+:= -- 2791
+add.period$ -- 81
+call.type$ -- 28
+change.case$ -- 28
+chr.to.int$ -- 321
+cite$ -- 35
+duplicate$ -- 1328
+empty$ -- 1557
+format.name$ -- 87
+if$ -- 4383
 int.to.chr$ -- 0
-int.to.str$ -- 26
-missing$ -- 213
-newline$ -- 145
-num.names$ -- 21
-pop$ -- 580
+int.to.str$ -- 28
+missing$ -- 235
+newline$ -- 155
+num.names$ -- 23
+pop$ -- 632
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1264
+skip$ -- 1424
 stack$ -- 0
-substring$ -- 663
-swap$ -- 892
-text.length$ -- 20
+substring$ -- 777
+swap$ -- 1008
+text.length$ -- 23
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 26
+type$ -- 28
 warning$ -- 7
-while$ -- 60
-width$ -- 28
-write$ -- 287
+while$ -- 68
+width$ -- 30
+write$ -- 312
 (There was 1 error message)
