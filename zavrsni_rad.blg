@@ -14,7 +14,7 @@ Repeated entry---line 354 of file library.bib
  : @misc{Leptonica
  :                ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Berg-Kirkpatrick2013"
+Warning--I didn't find a database entry for "Kneser1995"
 Warning--empty journal in Fujitake2023
 Warning--empty journal in Olejniczak2022
 Warning--empty journal in Borovikov2014
@@ -24,7 +24,7 @@ Warning--empty journal in Noaman2015
 Warning--empty journal in Wick2018
 You've used 29 entries,
             4225 wiz_defined-function locations,
-            1029 strings with 13444 characters,
+            1029 strings with 13424 characters,
 and the built_in function-call counts, 19333 in all, are:
 = -- 1480
 > -- 428

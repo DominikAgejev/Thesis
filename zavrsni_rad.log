@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  8 SEP 2024 01:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  8 SEP 2024 21:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -727,10 +727,20 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \enit@count@id=\count338
 \enitdp@description=\count339
 )
-LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 
-74.
+(c:/texlive/2023/texmf-dist/tex/latex/base/fixltx2e.sty
+Package: fixltx2e 2016/12/29 v2.1a fixes to LaTeX (obsolete)
+Applying: [2015/01/01] Old fixltx2e package on input line 46.
 
-(c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/t1stix2.fd
+
+Package fixltx2e Warning: fixltx2e is not required with releases after 2015
+(fixltx2e)                All fixes are now in the LaTeX kernel.
+(fixltx2e)                See the latexrelease package for details.
+
+Already applied: [0000/00/00] Old fixltx2e package on input line 53.
+)
+LaTeX Font Info:    Trying to load font information for T1+stix2 on input line 
+76.
+ (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/t1stix2.fd
 File: t1stix2.fd 2018/04/02 v2.0.0-latex stix2 T1 font definitions
 )
 (c:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
@@ -741,40 +751,40 @@ File: l3backend-pdftex.def 2023-10-10 L3 backend support: PDF output (pdfTeX)
 (./zavrsni_rad.aux)
 \openout1 = `zavrsni_rad.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 74.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for LS1/stix2/m/n on input line 76.
 LaTeX Font Info:    Trying to load font information for LS1+stix2 on input line
- 74.
+ 76.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2.fd
 File: ls1stix2.fd 2018/04/02 v2.0.0-latex stix2 LS1 font definitions
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 74.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for LS2/stix2/m/n on input line 76.
 LaTeX Font Info:    Trying to load font information for LS2+stix2 on input line
- 74.
+ 76.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2.fd
 File: ls2stix2.fd 2018/04/02 v2.0.0-latex stix2 LS2 font definitions
 )
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 74.
-LaTeX Font Info:    ... okay on input line 74.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 76.
+LaTeX Font Info:    ... okay on input line 76.
 \c@mv@tabular=\count341
 \c@mv@boldtabular=\count342
 
@@ -854,90 +864,90 @@ Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
-LaTeX Info: Command `\dddot' is already robust on input line 74.
-LaTeX Info: Command `\ddddot' is already robust on input line 74.
-Package hyperref Info: Link coloring OFF on input line 74.
+LaTeX Info: Command `\dddot' is already robust on input line 76.
+LaTeX Info: Command `\ddddot' is already robust on input line 76.
+Package hyperref Info: Link coloring OFF on input line 76.
  (./zavrsni_rad.out) (./zavrsni_rad.out)
 \@outlinefile=\write3
 \openout3 = `zavrsni_rad.out'.
 
 \c@lstlisting=\count349
 LaTeX Font Info:    Trying to load font information for T1+opensans-TLF on inpu
-t line 78.
+t line 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/opensans/T1opensans-TLF.fd
 File: T1opensans-TLF.fd 2019/06/24 Font definitions for T1/opensans-TLF.
 )
 LaTeX Font Info:    Font shape `T1/opensans-TLF/m/n' will be
-(Font)              scaled to size 14.0pt on input line 78.
+(Font)              scaled to size 14.0pt on input line 80.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <14> not availabl
 e
 (Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input lin
-e 78.
+e 80.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 14.0pt on input line 78.
+(Font)              scaled to size 14.0pt on input line 80.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <20> not availabl
 e
 (Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input lin
-e 78.
+e 80.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 20.0pt on input line 78.
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 78.
+(Font)              scaled to size 20.0pt on input line 80.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 80.
 LaTeX Font Info:    Trying to load font information for LS1+stix2scr on input l
-ine 78.
+ine 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2scr.fd
 File: ls1stix2scr.fd 2018/04/02 v2.0.0-latex stix2 script LS1 font definitions
 )
 LaTeX Font Info:    Trying to load font information for LS2+stix2ex on input li
-ne 78.
+ne 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2ex.fd
 File: ls2stix2ex.fd 2018/04/02 v2.0.0-latex stix2 extentions LS2 font definitio
 ns
 )
 LaTeX Font Info:    Trying to load font information for LS1+stix2frak on input 
-line 78.
+line 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2frak.fd
 File: ls1stix2frak.fd 2018/04/02 v2.0.0-latex stix2 fraktur LS1 font definition
 s
 )
 LaTeX Font Info:    Trying to load font information for LS1+stix2bb on input li
-ne 78.
+ne 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2bb.fd
 File: ls1stix2bb.fd 2018/04/02 v2.0.0-latex stix2 blackboard LS1 font definitio
 ns
 )
 LaTeX Font Info:    Trying to load font information for LS2+stix2cal on input l
-ine 78.
+ine 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2cal.fd
 File: ls2stix2cal.fd 2018/04/02 v2.0.0-latex stix2 calligraphic LS2 font defini
 tions
 )
 LaTeX Font Info:    Trying to load font information for LS1+stix2sf on input li
-ne 78.
+ne 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls1stix2sf.fd
 File: ls1stix2sf.fd 2018/04/02 v2.0.0-latex stix2 sans-serif LS1 font definitio
 ns
 )
 LaTeX Font Info:    Trying to load font information for LS2+stix2tt on input li
-ne 78.
+ne 80.
 
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ls2stix2tt.fd
 File: ls2stix2tt.fd 2018/04/02 v2.0.0-latex stix2 typewriter LS2 font definitio
 ns
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 80.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 78.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 80.
 
 
 (c:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -946,48 +956,48 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 {c:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2023/
 texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}]
-<hr_0036537505_73.pdf, id=165, 598.235pt x 845.1575pt>
+<hr_0036537505_73.pdf, id=169, 598.235pt x 845.1575pt>
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf>
-Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 87.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf>
-Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf  used on input line 87.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
-<hr_0036537505_73.pdf, id=168, page=1, 598.235pt x 845.1575pt>
+<hr_0036537505_73.pdf, id=172, page=1, 598.235pt x 845.1575pt>
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
-Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 598.23354pt x 845.15544pt.
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
-Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
-Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
-Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
 File: hr_0036537505_73.pdf Graphic file (type pdf)
 <use hr_0036537505_73.pdf, page 1>
-Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 85.
+Package pdftex.def Info: hr_0036537505_73.pdf , page1 used on input line 87.
 (pdftex.def)             Requested size: 597.7406pt x 844.45905pt.
  [2 <./hr_0036537505_73.pdf>]
 LaTeX Font Info:    Font shape `T1/stix2/m/sl' in size <12> not available
-(Font)              Font shape `T1/stix2/m/it' tried instead on input line 90.
+(Font)              Font shape `T1/stix2/m/it' tried instead on input line 92.
  [3
 
 {c:/texlive/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}]
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <18> not availabl
 e
 (Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input lin
-e 102.
+e 104.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 18.0pt on input line 102.
+(Font)              scaled to size 18.0pt on input line 104.
  (./zavrsni_rad.toc
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
@@ -1006,7 +1016,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.106 \chapter
+l.108 \chapter
               {Uvod} [2]
 Poglavlje 1..
 
@@ -1014,7 +1024,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.122 
+l.124 
        [3
 
 ] [4]
@@ -1022,55 +1032,55 @@ Poglavlje 2..
 LaTeX Font Info:    Font shape `T1/opensans-TLF/bx/n' in size <16> not availabl
 e
 (Font)              Font shape `T1/opensans-TLF/b/n' tried instead on input lin
-e 149.
+e 151.
 LaTeX Font Info:    Font shape `T1/opensans-TLF/b/n' will be
-(Font)              scaled to size 16.0pt on input line 149.
+(Font)              scaled to size 16.0pt on input line 151.
 [5
 
 ]
-<Figures/binarization.png, id=267, 768.37062pt x 123.46124pt>
+<Figures/binarization.png, id=272, 768.37062pt x 123.46124pt>
 File: Figures/binarization.png Graphic file (type png)
 <use Figures/binarization.png>
-Package pdftex.def Info: Figures/binarization.png  used on input line 160.
+Package pdftex.def Info: Figures/binarization.png  used on input line 162.
 (pdftex.def)             Requested size: 396.91325pt x 63.77634pt.
  [6 <./Figures/binarization.png>]
-<Figures/line-segmentation.png, id=287, 224.33812pt x 45.92157pt>
+<Figures/line-segmentation.png, id=292, 224.33812pt x 45.92157pt>
 File: Figures/line-segmentation.png Graphic file (type png)
 <use Figures/line-segmentation.png>
-Package pdftex.def Info: Figures/line-segmentation.png  used on input line 179.
+Package pdftex.def Info: Figures/line-segmentation.png  used on input line 181.
 
 (pdftex.def)             Requested size: 396.91325pt x 81.25592pt.
-<Figures/simple-letter-matrix.png, id=289, 438.13687pt x 168.63pt>
+<Figures/simple-letter-matrix.png, id=294, 438.13687pt x 168.63pt>
 File: Figures/simple-letter-matrix.png Graphic file (type png)
 <use Figures/simple-letter-matrix.png>
 Package pdftex.def Info: Figures/simple-letter-matrix.png  used on input line 1
-90.
+92.
 (pdftex.def)             Requested size: 396.91325pt x 152.76651pt.
 LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 1
-91.
+93.
 
 (c:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 ) [7{c:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc} <./Fi
 gures/line-segmentation.png> <./Figures/simple-letter-matrix.png>]
-<Figures/CRNN-architecture.jpeg, id=306, 1280.785pt x 1324.95pt>
+<Figures/CRNN-architecture.jpeg, id=311, 1280.785pt x 1324.95pt>
 File: Figures/CRNN-architecture.jpeg Graphic file (type jpg)
 <use Figures/CRNN-architecture.jpeg>
-Package pdftex.def Info: Figures/CRNN-architecture.jpeg  used on input line 208
+Package pdftex.def Info: Figures/CRNN-architecture.jpeg  used on input line 210
 .
 (pdftex.def)             Requested size: 308.71106pt x 319.34904pt.
  [8 <./Figures/CRNN-architecture.jpeg>]
 [9]
 Poglavlje 3..
 LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line
- 228.
+ 230.
 (c:/texlive/2023/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
-<Figures/historical-issues.png, id=321, 679.03688pt x 271.51437pt>
+<Figures/historical-issues.png, id=326, 679.03688pt x 271.51437pt>
 File: Figures/historical-issues.png Graphic file (type png)
 <use Figures/historical-issues.png>
-Package pdftex.def Info: Figures/historical-issues.png  used on input line 238.
+Package pdftex.def Info: Figures/historical-issues.png  used on input line 240.
 
 (pdftex.def)             Requested size: 264.61333pt x 105.80316pt.
  [10
@@ -1086,32 +1096,37 @@ Poglavlje 5..
 
 ]
 
-LaTeX Warning: Citation `Kneser1995' on page 15 undefined on input line 340.
+LaTeX Warning: Citation `Kneser1995' on page 15 undefined on input line 342.
 
-<Figures/typesetting-model.png, id=378, 343.2825pt x 510.90875pt>
+<Figures/typesetting-model.png, id=384, 986.18437pt x 557.08125pt>
 File: Figures/typesetting-model.png Graphic file (type png)
 <use Figures/typesetting-model.png>
-Package pdftex.def Info: Figures/typesetting-model.png  used on input line 357.
+Package pdftex.def Info: Figures/typesetting-model.png  used on input line 358.
 
-(pdftex.def)             Requested size: 193.95665pt x 288.66397pt.
+(pdftex.def)             Requested size: 441.01773pt x 249.12868pt.
 [15{c:/texlive/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathit.enc}{c:
 /texlive/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm.enc}{c:/texli
 ve/2023/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc}{c:/texlive/20
-23/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc} <./Figures/typesett
-ing-model.png>] [16]
+23/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}]
+<Figures/inking-model.png, id=396, 343.2825pt x 510.90875pt>
+File: Figures/inking-model.png Graphic file (type png)
+<use Figures/inking-model.png>
+Package pdftex.def Info: Figures/inking-model.png  used on input line 376.
+(pdftex.def)             Requested size: 193.95665pt x 288.66397pt.
+ [16 <./Figures/typesetting-model.png> <./Figures/inking-model.png>]
 Poglavlje 6..
-<Figures/korizmena.png, id=396, 411.5375pt x 267.49937pt>
+<Figures/korizmena.png, id=407, 411.5375pt x 267.49937pt>
 File: Figures/korizmena.png Graphic file (type png)
 <use Figures/korizmena.png>
-Package pdftex.def Info: Figures/korizmena.png  used on input line 402.
+Package pdftex.def Info: Figures/korizmena.png  used on input line 420.
 (pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/summa.png, id=397, 411.5375pt x 267.49937pt>
+<Figures/summa.png, id=408, 411.5375pt x 267.49937pt>
 File: Figures/summa.png Graphic file (type png)
 <use Figures/summa.png>
-Package pdftex.def Info: Figures/summa.png  used on input line 409.
+Package pdftex.def Info: Figures/summa.png  used on input line 427.
 (pdftex.def)             Requested size: 441.01773pt x 286.66231pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -1119,7 +1134,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 [17
 
 ] [18 <./Figures/korizmena.png> <./Figures/summa.png>]
-Overfull \hbox (3.93384pt too wide) in paragraph at lines 424--425
+Overfull \hbox (3.93384pt too wide) in paragraph at lines 442--443
 []\T1/stix2/m/n/12 Budu¢i da ta mjera ovisi o du-ljini tek-sta, di-je-lje-njem 
 Le-ven-sh-te-inove uda-lje-nosti ukup-
  []
@@ -1128,75 +1143,171 @@ Le-ven-sh-te-inove uda-lje-nosti ukup-
 Poglavlje 7..
 [20
 
-]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-[21]
-<Figures/letter-matrix.png, id=433, 225.84375pt x 301.125pt>
+] [21]
+<Figures/letter-matrix.png, id=443, 225.84375pt x 301.125pt>
 File: Figures/letter-matrix.png Graphic file (type png)
 <use Figures/letter-matrix.png>
-Package pdftex.def Info: Figures/letter-matrix.png  used on input line 516.
+Package pdftex.def Info: Figures/letter-matrix.png  used on input line 544.
 (pdftex.def)             Requested size: 129.30663pt x 172.41954pt.
-
+ [22]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[22 <./Figures/letter-matrix.png>] [23]
+[23 <./Figures/letter-matrix.png>] [24]
 Poglavlje 8..
-[24
+<Figures/korizmena9/1.png, id=467, 1042.89626pt x 42.1575pt>
+File: Figures/korizmena9/1.png Graphic file (type png)
+<use Figures/korizmena9/1.png>
+Package pdftex.def Info: Figures/korizmena9/1.png  used on input line 669.
+(pdftex.def)             Requested size: 374.86775pt x 15.15352pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 667--670
+[][]
+ []
+
+<Figures/korizmena9/2.png, id=468, 1042.89626pt x 40.15pt>
+File: Figures/korizmena9/2.png Graphic file (type png)
+<use Figures/korizmena9/2.png>
+Package pdftex.def Info: Figures/korizmena9/2.png  used on input line 675.
+(pdftex.def)             Requested size: 374.86775pt x 14.43192pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 673--676
+[][]
+ []
+
+<Figures/korizmena9/3.png, id=469, 1042.89626pt x 39.14626pt>
+File: Figures/korizmena9/3.png Graphic file (type png)
+<use Figures/korizmena9/3.png>
+Package pdftex.def Info: Figures/korizmena9/3.png  used on input line 680.
+(pdftex.def)             Requested size: 374.86775pt x 14.07112pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--681
+[][]
+ []
+
+<Figures/korizmena9/4.png, id=470, 1042.89626pt x 38.1425pt>
+File: Figures/korizmena9/4.png Graphic file (type png)
+<use Figures/korizmena9/4.png>
+Package pdftex.def Info: Figures/korizmena9/4.png  used on input line 685.
+(pdftex.def)             Requested size: 374.86775pt x 13.71033pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 683--686
+[][]
+ []
+
+<Figures/korizmena9/5.png, id=471, 1042.89626pt x 38.1425pt>
+File: Figures/korizmena9/5.png Graphic file (type png)
+<use Figures/korizmena9/5.png>
+Package pdftex.def Info: Figures/korizmena9/5.png  used on input line 690.
+(pdftex.def)             Requested size: 374.86775pt x 13.71033pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 688--691
+[][]
+ []
+
+<Figures/korizmena9/6.png, id=472, 1042.89626pt x 38.1425pt>
+File: Figures/korizmena9/6.png Graphic file (type png)
+<use Figures/korizmena9/6.png>
+Package pdftex.def Info: Figures/korizmena9/6.png  used on input line 695.
+(pdftex.def)             Requested size: 374.86775pt x 13.71033pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--696
+[][]
+ []
+
+<Figures/korizmena9/7.png, id=473, 1042.89626pt x 36.135pt>
+File: Figures/korizmena9/7.png Graphic file (type png)
+<use Figures/korizmena9/7.png>
+Package pdftex.def Info: Figures/korizmena9/7.png  used on input line 700.
+(pdftex.def)             Requested size: 374.86775pt x 12.98872pt.
+
+Overfull \hbox (5.72635pt too wide) in paragraph at lines 698--701
+[][]
+ []
+
+<Figures/korizmena9/8.png, id=474, 1042.89626pt x 36.135pt>
+File: Figures/korizmena9/8.png Graphic file (type png)
+<use Figures/korizmena9/8.png>
+Package pdftex.def Info: Figures/korizmena9/8.png  used on input line 705.
+(pdftex.def)             Requested size: 374.86775pt x 12.98872pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 703--706
+[][]
+ []
+
+<Figures/korizmena9/9.png, id=475, 1042.89626pt x 34.1275pt>
+File: Figures/korizmena9/9.png Graphic file (type png)
+<use Figures/korizmena9/9.png>
+Package pdftex.def Info: Figures/korizmena9/9.png  used on input line 710.
+(pdftex.def)             Requested size: 374.86775pt x 12.26714pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
+[][]
+ []
+
+<Figures/korizmena9/10.png, id=476, 517.935pt x 20.57687pt>
+File: Figures/korizmena9/10.png Graphic file (type png)
+<use Figures/korizmena9/10.png>
+Package pdftex.def Info: Figures/korizmena9/10.png  used on input line 715.
+(pdftex.def)             Requested size: 374.86775pt x 14.89351pt.
+[25
+
+] [26 <./Figures/korizmena9/1.png (PNG copy)> <./Figures/korizmena9/2.png (PNG 
+copy)> <./Figures/korizmena9/3.png (PNG copy)> <./Figures/korizmena9/4.png (PNG
+ copy)> <./Figures/korizmena9/5.png (PNG copy)> <./Figures/korizmena9/6.png (PN
+G copy)> <./Figures/korizmena9/7.png (PNG copy)> <./Figures/korizmena9/8.png (P
+NG copy)> <./Figures/korizmena9/9.png (PNG copy)> <./Figures/korizmena9/10.png>
 ]
 Poglavlje 9..
-[25
+[27
 
 ]
 Poglavlje 10..
-(./zavrsni_rad.bbl [26
+(./zavrsni_rad.bbl [28
 
-] [27
+] [29
 
-] [28] [29]) [30] [31
+] [30] [31]) [32] [33
 
-] [32
+] [34
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
 as been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.669 \chapter{The Code}
+l.776 \chapter{The Code}
                         
 Privitak A.
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
-[33
+[35
 
 
 ]
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
 
 Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 672.
+(blindtext)                 on input line 779.
 
-[34] (./zavrsni_rad.aux)
+[36] (./zavrsni_rad.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -1293,6 +1404,7 @@ multicol.sty    2023/03/30 v1.9f multicolumn formatting (FMi)
 placeins.sty    2005/04/18  v 2.2
    array.sty    2022/09/04 v2.5g Tabular extension package (FMi)
 enumitem.sty    2019/06/20 v3.9 Customized lists
+fixltx2e.sty    2016/12/29 v2.1a fixes to LaTeX (obsolete)
  t1stix2.fd    2018/04/02 v2.0.0-latex stix2 T1 font definitions
 l3backend-pdftex.def    2023-10-10 L3 backend support: PDF output (pdfTeX)
 ls1stix2.fd    2018/04/02 v2.0.0-latex stix2 LS1 font definitions
@@ -1329,9 +1441,20 @@ Figures/CRNN-architecture.jpeg
 ts1stix2.fd    2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 Figures/historical-issues.png
 Figures/typesetting-model.png
+Figures/inking-model.png
 Figures/korizmena.png
 Figures/summa.png
 Figures/letter-matrix.png
+Figures/korizmena9/1.png
+Figures/korizmena9/2.png
+Figures/korizmena9/3.png
+Figures/korizmena9/4.png
+Figures/korizmena9/5.png
+Figures/korizmena9/6.png
+Figures/korizmena9/7.png
+Figures/korizmena9/8.png
+Figures/korizmena9/9.png
+Figures/korizmena9/10.png
 zavrsni_rad.bbl
  ***********
 
@@ -1339,14 +1462,14 @@ zavrsni_rad.bbl
 LaTeX Warning: There were undefined references.
 
 Package rerunfilecheck Info: File `zavrsni_rad.out' has not changed.
-(rerunfilecheck)             Checksum: 747CDF1A5F1EF8B7196B511986B257B4;4929.
+(rerunfilecheck)             Checksum: 279C63E5E6D78D1D3BE790DCDCE64E7E;5062.
  ) 
 Here is how much of TeX's memory you used:
- 20714 strings out of 474503
- 317612 string characters out of 5756704
- 1946043 words of memory out of 5000000
- 42216 multiletter control sequences out of 15000+600000
- 668224 words of font info for 145 fonts, out of 8000000 for 9000
+ 20847 strings out of 474503
+ 321000 string characters out of 5756704
+ 1950043 words of memory out of 5000000
+ 42339 multiletter control sequences out of 15000+600000
+ 668537 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  87i,17n,131p,771b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb><
@@ -1358,10 +1481,10 @@ live/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><c:/t
 exlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on zavrsni_rad.pdf (37 pages, 2316131 bytes).
+Output written on zavrsni_rad.pdf (39 pages, 2969233 bytes).
 PDF statistics:
- 623 PDF objects out of 1000 (max. 8388607)
- 526 compressed objects within 6 object streams
- 126 named destinations out of 1000 (max. 500000)
- 378 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 657 PDF objects out of 1000 (max. 8388607)
+ 544 compressed objects within 6 object streams
+ 132 named destinations out of 1000 (max. 500000)
+ 441 words of extra memory for PDF output out of 10000 (max. 10000000)
 

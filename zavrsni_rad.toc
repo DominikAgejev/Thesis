@@ -33,18 +33,19 @@
 \contentsline {subsection}{\numberline {7.1.2.}Veličina snopa}{21}{subsection.7.1.2}%
 \contentsline {section}{\numberline {7.2.}Model znakovlja}{22}{section.7.2}%
 \contentsline {section}{\numberline {7.3.}Ispitivanje ortografskih mogućnosti}{23}{section.7.3}%
-\contentsline {chapter}{\numberline {8.}Sinteza rješenja}{24}{chapter.8}%
-\contentsline {chapter}{\numberline {9.}Diskusija}{25}{chapter.9}%
-\contentsline {chapter}{\numberline {10.}Zaključak}{26}{chapter.10}%
-\contentsline {chapter}{Literatura}{27}{chapter*.17}%
+\contentsline {subsection}{\numberline {7.3.1.}Jezični model}{24}{subsection.7.3.1}%
+\contentsline {chapter}{\numberline {8.}Sinteza rješenja}{25}{chapter.8}%
+\contentsline {chapter}{\numberline {9.}Diskusija}{27}{chapter.9}%
+\contentsline {chapter}{\numberline {10.}Zaključak}{28}{chapter.10}%
+\contentsline {chapter}{Literatura}{29}{chapter*.20}%
 \babel@toc {croatian}{}\relax 
-\contentsline {chapter}{Sa\v {z}etak}{31}{chapter*.18}%
+\contentsline {chapter}{Sa\v {z}etak}{33}{chapter*.21}%
 \babel@toc {croatian}{}\relax 
 \babel@toc {croatian}{}\relax 
-\babel@toc {croatian}{}\relax 
-\babel@toc {english}{}\relax 
-\contentsline {chapter}{Abstract}{32}{chapter*.19}%
 \babel@toc {croatian}{}\relax 
 \babel@toc {english}{}\relax 
+\contentsline {chapter}{Abstract}{34}{chapter*.22}%
 \babel@toc {croatian}{}\relax 
-\contentsline {chapter}{\numberline {A:}The Code}{33}{chapter.1}%
+\babel@toc {english}{}\relax 
+\babel@toc {croatian}{}\relax 
+\contentsline {chapter}{\numberline {A:}The Code}{35}{chapter.1}%

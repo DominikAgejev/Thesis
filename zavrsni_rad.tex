@@ -45,6 +45,8 @@
 
 \usepackage[justification=centering]{caption}
 
+\usepackage{fixltx2e}
+
 %--- PODACI O RADU / THESIS INFORMATION ----------------------------------------
 
 % Naslov na engleskom jeziku / Title in English
@@ -320,9 +322,9 @@ Njegove glavne značajke su: \cite{Ocular}
 
 U \ref{pog:ocr_uvod} poglavlju spomenuta je klasifikacijska metoda uspoređivanja predložaka čiji je glavni nedostatak neprilagodljivost na različita znakovlja.
 
-Ocular nadilazi tu poteškoću gradeći model znakovlja dinamički, tj. po potrebi za svaki dokument, te ne uspoređuje ulazni znak izravno s predloškom, već na temelju naučenog modela, uzimajući u obzir kontekst, nagnuće teksta, količinu tinte i šum, generira znak koji potom uspoređuje s ulaznim znakom.
+Ocular nadilazi tu poteškoću gradeći model znakovlja dinamički, tj. po potrebi za svaki dokument, te ne uspoređuje ulazni znak izravno s predloškom, već na temelju naučenog modela, uzimajući u obzir kontekst, nagnuće teksta, količinu tinte i šum, generira znak koji potom uspoređuje s pikselima ulaznog znaka.
 
-To postiže četirima generativnim probabilističkim modelima koji predstavljaju aspekte procesa tiskanja: jezični model, slovoslagarski ili tipografski model, koji uključuje model tinte, te model šuma.
+To postiže četirima generativnim probabilističkim modelima koji predstavljaju aspekte procesa tiskanja: jezični model, slovoslagarski ili tipografski model, koji uključuje model tinte, te model šuma, koji združeni tvore skriveni polu-Markovljev model (HSMM).
 
 Međuovisnosti ulaza i modela određuje sljedeća formula, \cite{Berg2013} gdje \textit{E} predstavlja tekst, \textit{X} piksele ulazne slike, \textit{T} raspored znakova na slici, a \textit{R} aspekte otiskivanja tinte:
 
@@ -339,29 +341,45 @@ Međuovisnosti ulaza i modela određuje sljedeća formula, \cite{Berg2013} gdje 
 
 Jezični model jest Kneser-Neyev uglađeni znakovni \textit{n}-gramski model \cite{Kneser1995} koji se uči na korpusu teksta u ciljnom jeziku. Specifičnost ovog modela, koja ga razlikuje od uobičajenih NLP modela, je da nema zaustavni znak, nego tretira cijeli redak kao jednu cjelinu, sadržavala ona jednu rečenicu ili pak više njih.
 
-\textcolor{red}{Objasniti veličinu snopa} \cite{Berg2014}
+Blisko povezan s jezičnim modelom pojam je veličine snopa (eng. \textit{beam size}) pretraživanja skupa stanja. Naime, prilikom treniranja modela znakovlja, a i same transkripcije, na temelju jezičnog modela generiraju se najvjerojatniji slijedovi znakova, koji se potom uspoređuju s ulazom i od kojih se odabire najsličniji.
+
+Veličina snopa označava jednostavno broj tih nizova koji će se uzeti u obzir. \cite{Berg2014} Veći snop će produljiti vrijeme izvršavanja, a i prevelik snop može dovesti do prenaučenosti.
 
 
 \section{Slovoslagarski model}
 
+	
+Slovoslagarstvo (eng. \textit{typesetting}) u kontekstu mehaničkog tiskanja podrazumijeva postavljanje glifova znakova prikladno razmaknute na traku za tiskanje.
+
+Ocularov generativni model radi vrlo sličnu stvar. \ref{fig:typesetting-model} Prvo generira širinu glifa $g_i$, zatim lijevi razmak $l_i$ te desni razmak $r_i$, koji naravno ovise o prepoznatom znaku $e_i$.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1.0\linewidth]{Figures/typesetting-model.png} 
+	\caption{\cite{Berg2013}}
+	\label{fig:typesetting-model}
+\end{figure}
+
+
+\subsection{Model tinte}
+
 \begin{multicols}{2}
 	
 	% First column
-	Tekst
 	
+	Text
 	
 	% Second column
 	\columnbreak
 	\begin{figure}[H]
 		\centering
-		\includegraphics[width=0.9\linewidth]{Figures/typesetting-model.png} 
+		\includegraphics[width=0.9\linewidth]{Figures/inking-model.png} 
 		\caption{\cite{Berg2013}}
-		\label{fig:typesetting-model}
+		\label{fig:inking-model}
 	\end{figure}
 	
 \end{multicols}
 
-\subsection{Model tinte}
 
 
 
@@ -395,7 +413,7 @@ Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe s
 	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)
 \end{itemize}
 
-Korizmena okružnica korištena je za većinu ispitivanja, a \textit{Summa} je izabrana za isprobavanje ortografskih mogućnosti te kao primjer teškog ulaza za sustav.
+Korizmena okružnica korištena je za sva ispitivanja osim za isprobavanje ortografskih mogućnosti gdje je izabrana \textit{Summa} kao primjer zahtjevnog ulaza za sustav.
 
 \begin{figure}[h!]
 	\centering
@@ -445,30 +463,38 @@ Ukupan broj riječi odabranog skupa podataka od 8.7 milijuna usporediv je sa sku
 
 \subsection{Veličina skupa podataka}
 
-Ispitani su i podskupi odabranog ali i veći skupovi podataka, temeljeni na prethodno navedenom uz dva tipa proširenja: stranom i domaćom beletristikom (11.6 milijuna riječi) te tekstovima vjerske tematike (6 milijuna riječi).
+Ispitani su i podskupi odabranog ali i veći skupovi podataka, temeljeni na prethodno navedenom uz dva tipa proširenja: stranom i domaćom beletristikom (11.6 milijuna riječi) te tekstovima vjerske tematike (6 milijuna riječi). 
+
+Nažalost, dodatak beletristike dovodio je do neizbježnog neuspjeha treninga te je stoga ispitano samo proširenje vjerskim štivom.
 
 Tekstovi vjerskih knjiga nisu bili lektorirani nego nesavršeni proizvodi prepoznavanja teksta, a uključeni su svejedno kako bi se ispitalo doprinosi li kvantiteta potencijalno više od kvalitete ako greške nisu značajne.
 
-Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na tekstovima s dotad manjom preciznošću prepoznavanja, kao što je \textit{Summa nauka christianskoga}, međutim, ni smanjenje ni povećanje skupa podataka nije dovelo do poboljšanja u preciznosti, a proširenje je značajno usporilo trening i transkripciju.
+Kako je vidljivo iz tablice \ref{tab:lm_performance}, povećanje skupa podataka ipak je dovelo do smanjenja preciznosti. Ručnom provjerom lako se uviđa kako su greške iz jezičnog modela utjecale na ispis.
+
+Primjerice, prvotni jezični model ispravno prepoznaje riječ \texttt{katekizam}, dok ju prošireni zamijenjuje nizom \texttt{katalo sam}, s tim da se niz \texttt{katalo} pojavljuje samo jednom u proširenom skupu podataka.
+
+Očigledno, Ocularov jezični model nije robustan na greške u skupu podataka čak i kad se pojavljuju samo jednom, što je razumljivo, jer je poželjno da svaka viđena riječ postane dio vokabulara.
+
+Ipak, pomalo je iznenađujuće da je \texttt{katalo} nadjačalo riječ koja se pojavljuje 80 puta u skupu podataka. Međutim, čini se kako je do toga došlo zbog kombinacije s nizom \texttt{sam} koji se pojavljuje preko 57 tisuća puta.
+
+
 
 \bgroup
 \def\arraystretch{1.25}
 \begin{table}[h]
 	\centering
-	\begin{tabular}{|c|c|c|c|}
+	\begin{tabular}{|c|c|c|}
 		\hline
-		\textbf{Ispitivani dokument} & \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
-		\multirow{2}{*}{Korizmena okružnica} & Izvorni & 1.05 & 2.74 \\ \cline{2-4}
-		 & Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
-		\multirow{2}{*}{Summa nauka christianskoga} & Izvorni & 17.67 & 66.79 \\ \cline{2-4}
-		 & Izvorni + OCR vjerskih knjiga & 16.52 & 64.64 \\ \hline
+		 \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
+		 Izvorni & 1.05 & 2.74 \\ \hline
+		 Izvorni + OCR vjerskih knjiga & 1.59 & 3.64 \\ \hline
 	\end{tabular}
-	\caption{Usporedba uspješnosti jezičnih modela}
+	\caption{Uspješnost povećanja jezičnog modela}
 	\label{tab:lm_performance}
 \end{table}
 \egroup
 
-Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za \textit{Korizmenu okružnicu}.
+
 
 \subsection{Veličina snopa}
 
@@ -497,9 +523,11 @@ Ipak, kako je vidljivo iz donje tablice \ref{tab:7.2}, povećanje snopa nije dov
 \end{table}
 \egroup
 
-Rezultati impliciraju kako je bolje ne ispraviti prepoznati znakovni niz ako predloženi ispravak nije među prvima predložen. To može biti do grešaka u skupu podataka za jezični model, gdje veći snop obuhvati i rijetke pogrešne, ali slične nizove ispravljanome. 
+Rezultati impliciraju kako je bolje ne ispraviti prepoznati znakovni niz ako predloženi ispravak nije među prvih pedeset predloženih. To može biti do grešaka u skupu podataka za jezični model, gdje veći snop obuhvati i rijetke pogrešne, ali slične nizove ispravljanome. 
 
-S druge strane, može biti posljedica inherentnog ograničenja stohastičkog modela. Tomu u prilog ide, primjerice, zamjena rijetkog niza \texttt{vjere:}, koji se vjerojatno nije nalazio u skupu podataka, riječju \texttt{vjetar}. 
+Općenitije gledano, povećanje snopa pretraživanja prostora stanja podržava "pamćenje" više informacija i stoga dovodi do prenaučenosti, kao i prekomjerno povećanje neuronske mreže. Drugim riječima, veća veličina snopa podložnija je utjecaju šuma. 
+
+Tomu u prilog ide, primjerice, zamjena rijetkog niza \texttt{vjere:}, koji se pojavljuje 4 puta u skupu podataka, riječju \texttt{vjetar}, koja se pojavljuje 897 puta. 
 
 \section{Model znakovlja}
 
@@ -567,6 +595,27 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 
 \textcolor{red}{Rad na Summi. Loši rezultati i malo podataka. Spominjati ili ne?}
 
+\subsection{Jezični model}
+
+\bgroup
+\def\arraystretch{1.25}
+\begin{table}[h]
+	\centering
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\textbf{Ispitivani dokument} & \textbf{Jezični model} & \textbf{CER} & \textbf{WER} \\ \hline
+		\multirow{2}{*}{Summa nauka christianskoga} & Izvorni & 17.67 & 66.79 \\ \cline{2-4}
+		& Izvorni + OCR vjerskih knjiga & 16.52 & 64.64 \\ \hline
+	\end{tabular}
+	\caption{Usporedba uspješnosti jezičnih modela}
+	\label{tab:ortography_performance}
+\end{table}
+\egroup
+
+Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na tekstovima s dotad manjom preciznošću prepoznavanja, kao što je \textit{Summa nauka christianskoga}, međutim, povećanje skupa podataka nije dovelo do značajnog poboljšanja u preciznosti, ali je značajno usporilo trening i transkripciju.
+
+Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za \textit{Korizmenu okružnicu}.
+
 %-------------------------------------------------------------------------------
 \chapter{Sinteza rješenja}
 \label{pog:sinteza_rješenja}
@@ -611,7 +660,63 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 \end{table}
 \egroup
 
-
+% Line 1
+\begin{figure}[H]
+	\centering
+	\begin{minipage}{0.85\linewidth}
+		\fbox{\texttt{\small Da griješan život vodi do otpada od vjere, svjedoči nam}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/1.png}
+	\end{minipage}
+	\centering
+	\begin{minipage}{0.85\linewidth}
+		\fbox{\texttt{\small pov\textcolor{red}{la}st svih vremena. U 16. stoljeću otpadoše milij\textcolor{red}{u}ni od Ka-}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/2.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small \textcolor{red}{r}ol Crkve. A uzrokom tome bio je samo slobodan i razudan}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/3.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small  život. Nova nauka \textcolor{red}{o}ga\textcolor{red}{n}jala je taštini i udobnosti. Jer se više}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/4.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small nisu Crkvi pokorava\colorbox{pink}{\tiny}i\colorbox{pink}{\tiny} tražili su sami sebi vjeru, te su mogli}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/5.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small činiti, što su god htjeli. Ta je nova vjera pustila uzde svim }}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/6.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small strastima, otvorila je vrata\colorbox{pink}{\tiny} oh\textcolor{red}{lo}sti, taštini, pohlepi, otimačini}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/7.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small i svim drugim grijesima. Nije čudo, što su staru vjeru s njenim }}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/8.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small strogim propisima odbacili, a prihvati\colorbox{pink}{\tiny}i novu, u kojoj se moglo}}
+		\vspace{0.5em}
+		\includegraphics[width=\linewidth]{Figures/korizmena9/9.png}
+	\end{minipage}
+	\begin{minipage}{0.85\linewidth}
+		\texttt{\fbox{\small lahko živjeti.\\}}
+		\vspace{0.5em}\\
+		\includegraphics[width=\linewidth]{Figures/korizmena9/10.png}
+	\end{minipage}
+	\caption{Transkricpija isječka najlošije stranice.}
+	\label{fig:compare}
+\end{figure}
 
 %-------------------------------------------------------------------------------
 \chapter{Diskusija}
@@ -620,6 +725,8 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 Ideje za nadogradnje: počeci i krajevi redaka su obično Ocularu kritični. Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba.
 
 Ograničenja Oculara - brzina, CUDA (java)
+
+Zamjena katekizam s katalo sam? Potencijal za napredak? Već postoji parametar za to?
 
 \textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
 

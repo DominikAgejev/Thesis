@@ -45,6 +45,13 @@ R.~Smith, ``An overview of the tesseract ocr engine'', u \emph{Ninth
 \BIBentrySTDinterwordspacing
 \BIBentrySTDinterwordspacing
 
+\bibitem{Berg2013}
+\BIBentryALTinterwordspacing
+T.~Berg-Kirkpatrick, G.~Durrett, i D.~Klein, ``Unsupervised transcription of
+  historical documents'', str. 207--217, 2013. [Mre\v zno]. Adresa:
+  \url{https://aclanthology.org/P13-1021/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Borovikov2014}
 E.~Borovikov, ``A survey of modern optical character recognition techniques'',
   2014.
@@ -127,13 +134,6 @@ G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,
   ``Remicare—medicine intake tracker and healthcare assistant'',
   \emph{Lecture Notes in Networks and Systems}, sv. 540, str. 273--283, 2023.
   \url{https://doi.org/10.1007/978-981-19-6088-8_25}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Berg2013}
-\BIBentryALTinterwordspacing
-T.~Berg-Kirkpatrick, G.~Durrett, i D.~Klein, ``Unsupervised transcription of
-  historical documents'', str. 207--217, 2013. [Mre\v zno]. Adresa:
-  \url{https://aclanthology.org/P13-1021/}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Springmann2014}
