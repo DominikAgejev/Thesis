@@ -10,57 +10,57 @@ Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 150 items from 100.
 Database file #1: library.bib
-Repeated entry---line 354 of file library.bib
+Repeated entry---line 350 of file library.bib
  : @misc{Leptonica
  :                ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "Kneser1995"
 Warning--empty journal in Fujitake2023
 Warning--empty journal in Olejniczak2022
 Warning--empty journal in Borovikov2014
 Warning--empty journal in Hassanein2015
 Warning--empty year in Hassanein2015
 Warning--empty journal in Noaman2015
+Warning--empty journal in Vaswani2023
 Warning--empty journal in Wick2018
-You've used 29 entries,
+You've used 32 entries,
             4225 wiz_defined-function locations,
-            1029 strings with 13424 characters,
-and the built_in function-call counts, 19333 in all, are:
-= -- 1480
-> -- 428
-< -- 137
-+ -- 247
-- -- 73
-* -- 881
-:= -- 2926
-add.period$ -- 84
-call.type$ -- 29
-change.case$ -- 29
-chr.to.int$ -- 336
-cite$ -- 36
-duplicate$ -- 1387
-empty$ -- 1619
-format.name$ -- 92
-if$ -- 4585
+            1041 strings with 13841 characters,
+and the built_in function-call counts, 21122 in all, are:
+= -- 1606
+> -- 480
+< -- 148
++ -- 276
+- -- 83
+* -- 960
+:= -- 3180
+add.period$ -- 92
+call.type$ -- 32
+change.case$ -- 32
+chr.to.int$ -- 363
+cite$ -- 40
+duplicate$ -- 1521
+empty$ -- 1771
+format.name$ -- 104
+if$ -- 5013
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 245
-newline$ -- 160
-num.names$ -- 24
-pop$ -- 652
+int.to.str$ -- 32
+missing$ -- 271
+newline$ -- 171
+num.names$ -- 26
+pop$ -- 729
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1490
+skip$ -- 1627
 stack$ -- 0
-substring$ -- 813
-swap$ -- 1061
-text.length$ -- 25
+substring$ -- 879
+swap$ -- 1157
+text.length$ -- 27
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 29
-warning$ -- 7
-while$ -- 72
-width$ -- 31
-write$ -- 325
+type$ -- 32
+warning$ -- 8
+while$ -- 77
+width$ -- 34
+write$ -- 350
 (There was 1 error message)

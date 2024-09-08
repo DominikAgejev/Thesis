@@ -185,15 +185,23 @@ Najjednostavnija metoda segmentacije gradi histogram piksela teksta te postavlja
 
 \section{Izdvajanje značajki}
 
-Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno definirane značajke (poput tzv. Granlundovih opisnika temeljenih na Fourierovoj transformaciji ili jednostavnih matrica koje predstavljaju oblik znaka) \cite{Trier1996} dok u suvremenim sustavima poput Tesseracta raniji slojevi neuronske mreže izdvajaju značajke, a kasniji provode klasifikaciju teksta.
+Starije metode OCR-a, prije prelaska na neuronske mreže, koristile su ručno definirane značajke, poput tzv. Granlundovih opisnika temeljenih na Fourierovoj transformaciji \cite{Trier1996} ili jednostavnih matrica koje predstavljaju oblik znaka, kao na slici \ref{slk:jednostavna-matrica},  dok u suvremenim sustavima poput Tesseracta raniji slojevi neuronske mreže izdvajaju značajke, a kasniji provode klasifikaciju teksta.
 
 \begin{figure}[hbt]
 	\centering
-	\includegraphics[width=0.9\linewidth]{Figures/simple-letter-matrix.png} 
-	\caption{Izdvajanje matrice značajki slova \texttt{A} \cite{Noaman2015}}
+	\includegraphics[width=0.7\linewidth]{Figures/simple-letter-matrix.png}
+	\caption{Tvorba predloška znaka \cite{Noaman2015}}
 	\label{slk:jednostavna-matrica}
 \end{figure}
 
+Za izdvajanje značajki koriste se konvolucijske neuronske mreže (CNN) koje se mogu predočiti kao niz filtera, od kojih prvi provjeravaju npr. je li određeni rub ili ugao prisutan u znaku, a kasniji slojevi zadržavajući najbitnije informacije uče općenitija pravila. \cite{IBM}
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.9\linewidth]{Figures/CNN architecture.png} 
+	\caption{LeNet CNN arhitektura \cite{IBM}}
+	\label{slk:CNN-architecture}
+\end{figure}
 
 \section{Klasifikacija}
 
@@ -201,23 +209,17 @@ Klasifikacija je najbitniji dio procesa i može se zvati prepoznavanjem teksta u
 
 Razvojem i širenjem neuronskih mreža one preuzimaju ujedno i izdvajanje značajki i njihovu klasifikaciju. Budući da neuronske mreže mogu, bez potrebe za ljudskim radom, u svojim težinama spremiti značajke na više razina apstrakcije, i, što je još bitnije, više samih značajki, nego li ljudi mogu ručno pretočiti u stroju razumljiv zapis, brzo su iskorijenile starije klasifikacijske arhitekture. \cite{Wang2012}
 
- \textcolor{red}{CNN \cite{Elagouni2014}, RNN, LSTM, Transformeri}
+Za klasifikaciju znakova koriste se povratne neuronske mreže (RNN) jer omogućuju pamćenje prijašnjih ulaza te stoga mogu modelirati nizove znakova, a ne samo jedan znak poput konvolucijskih mreža.
 
-Združivanjem konvolucijskih i povratnih neuoronskih slojeva dobivamo arhitekturu modernog klasifikatora kao na donjoj slici \ref{slk:crnn}.
+LSTM mreže \cite{Breuel2013} (eng. \textit{long short-term memory}) vrsta su povratne mreže koje imaju dulju kratkoročnu memoriju od običnog RNN-a koji pamti samo prethodno stanje.
 
-\begin{figure}[hbt]
-	\centering
-	\includegraphics[width=0.7\linewidth]{Figures/CRNN-architecture.jpeg} 
-	\caption{CRNN arhitektura \cite{Dharmale2023}}
-	\label{slk:crnn}
-\end{figure}
-
+Transformerska arhitektura \cite{Vaswani2023} isto adresira temporalne podatke, no omogućuje paralelnu obradu ulaza što ujedno ubrzava klasifikaciju uporabom grafičkih kartica i proširuje prostor pamćenja.
 
 \section{Naknadna obrada}
 
 Naknadna obrada podrazumijeva metode koje djeluju na klasificirani tekst. Najčešće korištena metoda naknadne obrade jest ispravljanje riječi pomoću jezičnog modela jer značajno povećava preciznost.
 
-Također se mogu uspoređivati rezultati različitih klasifikatora ili čak više iteracija istog klasifikatora, odlučujući na temelju glasanja koja je riječ vjerojatnija ili pak uspoređujući stupnjeve pouzdanosti transkripcije ako ih klasifikatori podržavaju.
+Također se mogu uspoređivati rezultati različitih klasifikatora ili čak više iteracija istog klasifikatora, odlučujući na temelju glasanja koja je riječ vjerojatnija ili pak uspoređujući stupnjeve pouzdanosti transkripcije ako ih klasifikatori podržavaju. \cite{Boiangiu2016}
 
 Osim toga, ako se prilikom faze segmentacije nisu razlučivali retci nego izravno znakovi, može se naknadno utvrditi hijerarhijski odnos teksta na slici u ovoj fazi.
 
@@ -243,6 +245,8 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 \end{figure}
 
 \section{Pregled literature}
+
+\textcolor{red}{U radu o Ocularu ima lista radova nekih.}
 
 \cite{Berg2013}
 \cite{Springmann2014}
@@ -293,14 +297,21 @@ Tijekom analize razmatra se: \cite{Tesseract}
 	\item[Pronalazak redaka teksta] \hfill \\ Tesseract analizira prostorne odnose između povezanih komponenti kako bi detektirao linije teksta. Ovaj korak koristi statistički pristup temeljen na razmacima između komponenti.
 \end{description}
 
-\section{Klasifikacija}
+\section{Izdvajanje značajki i klasifikacija}
 
-\textit{long short-term memory} (\textit{LSTM})
-\cite{Breuel2013} o LSTM-u
+ Tesseractovu arhitekturu, prikazanu na slici \ref{slk:crnn}, dobiva se združivanjem konvolucijske mreže za izdvajanje značajki te LSTM povratne mreže za klasifikaciju znakova.
+
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{Figures/CRNN-architecture.jpeg} 
+	\caption{CRNN arhitektura \cite{Dharmale2023}}
+	\label{slk:crnn}
+\end{figure}
+
 
 \section{Naknadna obrada}
 
-
+Tekst
 
 
 

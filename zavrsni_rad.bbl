@@ -110,6 +110,12 @@ A.~S. Hassanein, S.~Mohammad, M.~Sameer, i M.~E. Ragab, ``A survey on hough
 K.~M.~G. Noaman, J.~A.~M. Saif, i I.~A.~A. Alqubati, ``Optical character
   recognition based on genetic algorithms'', 2015.
 
+\bibitem{IBM}
+\BIBentryALTinterwordspacing
+``Deep learning architectures - ibm developer''. [Mre\v zno]. Adresa:
+  \url{https://developer.ibm.com/articles/cc-machine-learning-deep-learning-architectures/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{Wang2012}
 \BIBentryALTinterwordspacing
 T.~Wang, D.~J. Wu, A.~Coates, i A.~Y. Ng, ``End-to-end text recognition with
@@ -119,22 +125,22 @@ T.~Wang, D.~J. Wu, A.~Coates, i A.~Y. Ng, ``End-to-end text recognition with
   \url{https://ieeexplore.ieee.org/document/6460871}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Elagouni2014}
+\bibitem{Breuel2013}
 \BIBentryALTinterwordspacing
-K.~Elagouni, C.~Garcia, F.~Mamalet, i P.~Sébillot, ``Text recognition in
-  multimedia documents: A study of two neural-based ocrs using and avoiding
-  character segmentation'', \emph{International Journal on Document Analysis
-  and Recognition}, sv.~17, str. 19--31, 3 2014.
-  \url{https://doi.org/10.1007/S10032-013-0202-7}
+T.~M. Breuel, A.~Ul-Hasan, M.~A. Al-Azawi, i F.~Shafait, ``High-performance ocr
+  for printed english and fraktur using lstm networks'', \emph{Proceedings of
+  the International Conference on Document Analysis and Recognition, ICDAR},
+  str. 683--687, 2013. \url{https://doi.org/10.1109/ICDAR.2013.140}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Dharmale2023}
-\BIBentryALTinterwordspacing
-G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,
-  ``Remicare—medicine intake tracker and healthcare assistant'',
-  \emph{Lecture Notes in Networks and Systems}, sv. 540, str. 273--283, 2023.
-  \url{https://doi.org/10.1007/978-981-19-6088-8_25}
-\BIBentrySTDinterwordspacing
+\bibitem{Vaswani2023}
+A.~Vaswani, G.~Brain, N.~Shazeer, N.~Parmar, J.~Uszkoreit, L.~Jones, A.~N.
+  Gomez, Łukasz Kaiser, i I.~Polosukhin, ``Attention is all you need'', 2023.
+
+\bibitem{Boiangiu2016}
+C.-A. Boiangiu, R.~Ioanitescu, i R.-C. Dragomir, ``Voting-based ocr system'',
+  \emph{Journal of Information Systems and Operations Management}, sv.~10, str.
+  470--486, 9 2016.
 
 \bibitem{Springmann2014}
 \BIBentryALTinterwordspacing
@@ -191,12 +197,12 @@ J.~Sauvola, T.~Seppanen, S.~Haapakoski, i M.~Pietikainen, ``Adaptive document
   \url{https://github.com/tesseract-ocr/tesseract/}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Breuel2013}
+\bibitem{Dharmale2023}
 \BIBentryALTinterwordspacing
-T.~M. Breuel, A.~Ul-Hasan, M.~A. Al-Azawi, i F.~Shafait, ``High-performance ocr
-  for printed english and fraktur using lstm networks'', \emph{Proceedings of
-  the International Conference on Document Analysis and Recognition, ICDAR},
-  str. 683--687, 2013. \url{https://doi.org/10.1109/ICDAR.2013.140}
+G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,
+  ``Remicare—medicine intake tracker and healthcare assistant'',
+  \emph{Lecture Notes in Networks and Systems}, sv. 540, str. 273--283, 2023.
+  \url{https://doi.org/10.1007/978-981-19-6088-8_25}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Berg2014}
@@ -209,6 +215,14 @@ T.~Berg-Kirkpatrick i D.~Klein, ``Improved typesetting models for historical
 \BIBentryALTinterwordspacing
 ``tberg12/ocular: Ocular is a state-of-the-art historical ocr system.''. [Mre\v
   zno]. Adresa: \url{https://github.com/tberg12/ocular/}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Kneser1995}
+\BIBentryALTinterwordspacing
+R.~Kneser i H.~Ney, ``Improved backing-off for m-gram language modeling'',
+  \emph{ICASSP, IEEE International Conference on Acoustics, Speech and Signal
+  Processing - Proceedings}, sv.~1, str. 181--184, 1995.
+  \url{https://doi.org/10.1109/ICASSP.1995.479394}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ghostscript}
