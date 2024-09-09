@@ -428,20 +428,20 @@ Zatim treba prikupiti podatke za treniranje Oculara i namjestiti njegove hiperpa
 Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe same klasifikacije teksta izabrani su već obrađeni dokumenti:
 
 \begin{itemize}
-	\item Fra Jozo Garić, biskup – Korizmena okružnica (1932.)
-	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.)
+	\item Fra Jozo Garić, biskup – Korizmena okružnica (1932.) \ref{slk:korizmena}
+	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.) \ref{slk:summa}
 \end{itemize}
 
 Korizmena okružnica korištena je za sva ispitivanja osim za isprobavanje ortografskih mogućnosti gdje je izabrana \textit{Summa} kao primjer zahtjevnog ulaza za sustav.
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Figures/korizmena.png} 
 	\caption{Izvadak iz \textit{Korizmene okružnice}}
 	\label{slk:korizmena}
 \end{figure}
 
-\begin{figure}[h!]
+\begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Figures/summa.png} 
 	\caption{Izvadak iz \textit{Summe nauka christianskoga}}
@@ -660,7 +660,7 @@ Algoritam glasanja čita redak po redak Tesseractov ispis i traži odgovarajući
 	\label{fig:python_code}
 \end{figure}
 
-Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \ref{tab:system_performance}
+Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \ref{tab:system_performance}.
 
 \bgroup
 \def\arraystretch{1.25}
@@ -678,6 +678,8 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 	\label{tab:system_performance}
 \end{table}
 \egroup
+
+A na slici \ref{fig:compare} vidljiv je primjer transkripcije za najzahtjevniju stranicu ispitnog skupa.
 
 % Line 1
 \begin{figure}[H]
