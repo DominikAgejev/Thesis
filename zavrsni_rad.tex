@@ -300,6 +300,10 @@ Tijekom analize razmatra se: \cite{Tesseract}
 \section{Izdvajanje značajki i klasifikacija}
 
  Tesseractovu arhitekturu, prikazanu na slici \ref{slk:crnn}, dobiva se združivanjem konvolucijske mreže za izdvajanje značajki te LSTM povratne mreže za klasifikaciju znakova.
+ 
+ U procesu klasifikacije ključnu ulogu igra jezični model u kojem su spremljeni statistički uzorci jezika koje LSTM mreža koristi nakon inicijalnog raspoznavanja za upućivanje budućih pokušaja.
+ 
+ Tesseract također sprema prilagodljive predloške koje prilagođava varijacijama fonta, kurzivu, masnopisu, podcrtavanju i sl. te razmaku među znakovima.
 
 \begin{figure}[h!]
 	\centering
@@ -311,7 +315,9 @@ Tijekom analize razmatra se: \cite{Tesseract}
 
 \section{Naknadna obrada}
 
-Tekst
+Tesseract se ne koristi jezičnim modelom samo u zadnjem koraku, nego zapravo prožima čitav proces klasifikacije. Na temelju rječnika daje se prednost poznatim znakovnim nizovima, a upućen međuovisnostima jezičnog modela ispravlja riječi u skladu s kontekstom.
+
+Konačno, Tesseract prilagođava interpunkcijske znakove i razmake pravilima jezika.
 
 
 
@@ -367,35 +373,37 @@ Ocularov generativni model radi vrlo sličnu stvar. \ref{fig:typesetting-model} 
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Figures/typesetting-model.png} 
-	\caption{\cite{Berg2013}}
+	\caption{Stohastički proces generiranja glifa znaka \cite{Berg2013}}
 	\label{fig:typesetting-model}
 \end{figure}
 
 
 \subsection{Model tinte}
 
-\begin{multicols}{2}
-	
+%\setlength{\parskip}{10pt}
+\begin{multicols}{2}	
 	% First column
+	Kako bi generirani znak bio sličan ulaznom potrebno je odabrati prikladnu količinu tinte, ali i vertikalni pomak.
 	
-	Text
+	To postiže generiranjem količine tinte za raspodjelu po pikselima $d_i$ te pomak od dna $v_i$.
+	
+	Ove vrijednosti obično ne ovise o vrsti znaka te su stoga tako modelirane i u stohastičkim modelima.
+	
+	\section{Model šuma}
+	
+	Tekst
+	
 	
 	% Second column
 	\columnbreak
 	\begin{figure}[H]
 		\centering
 		\includegraphics[width=0.9\linewidth]{Figures/inking-model.png} 
-		\caption{\cite{Berg2013}}
+		\caption{Stohastički proces zacrnjivanja piksela glifa \cite{Berg2013}}
 		\label{fig:inking-model}
 	\end{figure}
 	
 \end{multicols}
-
-
-
-
-\section{Model šuma}
-
 
 
 
