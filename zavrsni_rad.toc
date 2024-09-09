@@ -26,8 +26,8 @@
 \contentsline {section}{\numberline {5.3.}Model šuma}{18}{section.5.3}%
 \contentsline {chapter}{\numberline {6.}Metodologija}{19}{chapter.6}%
 \contentsline {section}{\numberline {6.1.}Ispitni skup podataka}{19}{section.6.1}%
-\contentsline {section}{\numberline {6.2.}Mjere uspješnosti}{20}{section.6.2}%
-\contentsline {section}{\numberline {6.3.}Naknadna obrada}{21}{section.6.3}%
+\contentsline {section}{\numberline {6.2.}Predobrada i naknadna obrada}{20}{section.6.2}%
+\contentsline {section}{\numberline {6.3.}Mjere uspješnosti}{21}{section.6.3}%
 \contentsline {chapter}{\numberline {7.}Optimizacija Oculara}{22}{chapter.7}%
 \contentsline {section}{\numberline {7.1.}Jezični model}{22}{section.7.1}%
 \contentsline {subsection}{\numberline {7.1.1.}Veličina skupa podataka}{22}{subsection.7.1.1}%
@@ -48,4 +48,3 @@
 \babel@toc {croatian}{}\relax 
 \babel@toc {english}{}\relax 
 \babel@toc {croatian}{}\relax 
-\contentsline {chapter}{\numberline {A:}The Code}{35}{chapter.1}%

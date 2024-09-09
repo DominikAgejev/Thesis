@@ -230,12 +230,14 @@ Osim toga, ako se prilikom faze segmentacije nisu razlučivali retci nego izravn
 Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće, naime:
 \begin{itemize}
 	\item Čest višak ili manjak tinte pri tisku pojedinih znakova
-	\item \textcolor{red}{Zastarjela znakovlja (fontovi) s neuobičajenim znakovima} %(npr. ſ , ʒ )
+	\item Zastarjeli fontovi s neuobičajenim znakovima
 	\item Otežana predobrada zbog spremanja na mikrofilmu
 	\item Arhaičan jezik
 	\item Neravan tisak
 	\item Istrošenost i oštećenja papira
 \end{itemize}
+
+Neke od osobitosti starijeg tiska vidljive su na slici \ref{slk:historical-issues}. Takvim i drugim poteškoćama pristupili su istraživači na razne načine, o čemu ćemo više u idućem odjeljku.
 
 \begin{figure}[hbt]
 	\centering
@@ -250,20 +252,15 @@ Budući da je područje rada dosta usko, ali i zahvaljujući činjenici da napre
 
 Prvi značajan i još uvijek relevantan doprinos ujedno je i obuhvaćen ovim radom, a to su radovi u kojima je prezentiran \cite{Berg2013} i unaprijeđen Ocular \cite{Berg2014, Garrette2015, Garrette2016}, koji je razjašnjen u poglavlju \ref{pog:ocular} te se stoga ne će o njemu duljiti ovdje.
 
+Springmann i sur. u svom radu iz 2014. \cite{Springmann2014} predstavljaju model ispravljanja transkripcije starih latinskih tekstova temeljen na velikom uređenom leksikonu te prilagođavaju Tesseract povijesnom latinskom znakovlju pomoću sintetičkog skupa podataka.
 
-\cite{Springmann2014}
-\cite{Springmann2017}
+U novijem radu iz 2017. \cite{Springmann2017}, Springmann i sur. čine sličnu stvar. Ovaj put prilagođava se OCRopus ručno označenim slikama, tj. uz \textit{"ground-truth"} tekst. Specifičnost rješenja je u prilagođenosti za dijakronijske tekstove, odnosno  uzimanja u obzir promjene jezika kroz dulje vremensko razdoblje.
 
+Christy i sur. \cite{Christy2017} pak detaljno opisuju proces masovne digitalizaciju tiskanih tekstova koristeći širok raspon alata te opširno razlažući korake predobrade, naknadne obrade, itd.
 
-\cite{Christy2017}
-\cite{Wick2018}
+Iako je rad Wicka i sur. \cite{Wick2018} usmjeren na starije tiskane knjige, bit rada je općenitiji: uporaba dublje LSTM mreže uz više označenih podataka te sustav glasanja kako bi se postigli vrhunski rezultati.
 
-\textcolor{red}{U radu o Ocularu ima lista radova nekih.}
-
-
-Iako se ne tiče izričtio starih dokumenata te zahtijeva nadzirano učenje, rad \textit{OCR Post Correction for Endangered Language Texts} \cite{Rijhwani2022} osobito je obećavajuć.
-
-Naime, razvijen je model za ispravljanje transkripcije OCR sustava koji zahtijeva vrlo malo podataka za nadzirano učenje i uz to podržava učenje iz dvojezičnih ili prevedenih dokumenata. 
+Usprkos tome što se ne tiče izričito starih dokumenata te zahtijeva nadzirano učenje, rad \textit{OCR Post Correction for Endangered Language Texts} \cite{Rijhwani2022} osobito je obećavajuć. Naime, razvijen je model za ispravljanje transkripcije OCR sustava koji zahtijeva vrlo malo podataka za nadzirano učenje i uz to podržava učenje iz dvojezičnih ili prevedenih dokumenata. 
 
 Za razliku od Oculara koji inkorporira jezični model u sam proces transkripcije, najveća prednost ovog rješenja jest njegova modularnost, tj. mogućnost korištenja na tekstu neovisno o OCR modelu.
 
@@ -467,6 +464,16 @@ Ocular radi jedino s PDF dokumentima zastarjele verzije 1.4 te ih je stoga bilo 
 
 Tesseract pak radi jedino na slikama te je zato bilo potrebno ekstrahirati ih iz PDF-a prije prepoznavanje teksta. Ovdje je zgodno napomenuti da treba paziti da se prilikom pretvorbe ne smanji DPI rezolucija jer to ima poguban utjecaj na preciznost.
 
+\section{Predobrada i naknadna obrada}
+
+Radi veće bliskosti realističnoj primjeni učinjene su jednostavne obrade teksta.
+
+U Tesseractovom ispisu nizovi dva zareza \texttt{,,} zamijenjeni su ravnim navodnicima \texttt{"} te je za donje navodnike u ispitnom skupu podataka učinjeno isto.
+
+Budući da su Ocular duge crte često bunile u skupu podataka za jezični model zamijenjene su crticama \texttt{-}. To ne predstavlja problem jer se može jednostavno naknadno utvrditi treba li biti gdje duga ili kratka crta.
+
+
+
 \section{Mjere uspješnosti}
 
 Za uspoređivanje znakovnih nizova najčešće korištena mjera uspješnosti je \textbf{Levenshteinova udaljenost} koja bilježi broj potrebnih zamjena, brisanja ili umetanja znakova da bi se iz jednog niza dobio drugi. \cite{Levenshtein1965}
@@ -475,13 +482,6 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 
 \textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se uzimanjem riječi za najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, te dijeljenjem te udaljenosti s ukupnim brojem riječi.
 
-\section{Naknadna obrada}
-
-\textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
-
-Za Ocular duge crte u -
-
-Jednostavno se može naknadno utvrditi treba li biti duga ili kratka crta.
 
 %-------------------------------------------------------------------------------
 \chapter{Optimizacija Oculara}
@@ -631,8 +631,6 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 \FloatBarrier
 
 \section{Ispitivanje ortografskih mogućnosti}
-
-\textcolor{red}{Rad na Summi. Loši rezultati i malo podataka. Spominjati ili ne?}
 
 Kako bi uspješno prepoznavali arhaične ortografske varijacije, u izvornom radu \cite{Garrette2016} pretvorbom suvremenih tekstova, na temelju pravila koja su definirali jezikoslovci, konstruiran je skup podataka s arhaičnim ortografskim varijacijama.
 
@@ -823,10 +821,6 @@ Imajući taj trend u vidu, budućnost transkripcije povijesnih dokumenata nazire
 
 % Sva poglavlja koja slijede će biti označena slovom i riječi privitak / All following chapters will be denoted with an appendix and a letter
 \backmatter
-
-\chapter{The Code}
-
-\Blindtext
 
 
 \end{document}
