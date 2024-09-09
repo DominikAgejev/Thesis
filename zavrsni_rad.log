@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  9 SEP 2024 12:04
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.10.22)  9 SEP 2024 12:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1137,31 +1137,35 @@ Package pdftex.def Info: Figures/summa.png  used on input line 446.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[18
 
-] [19 <./Figures/korizmena.png> <./Figures/summa.png>]
 Overfull \hbox (3.93384pt too wide) in paragraph at lines 461--462
 []\T1/stix2/m/n/12 Budu¢i da ta mjera ovisi o du-ljini tek-sta, di-je-lje-njem 
 Le-ven-sh-te-inove uda-lje-nosti ukup-
  []
 
-[20]
+[18
+
+] [19 <./Figures/korizmena.png> <./Figures/summa.png>] [20]
 Poglavlje 7..
 [21
 
-] [22]
-<Figures/letter-matrix.png, id=458, 225.84375pt x 301.125pt>
+]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[22]
+<Figures/letter-matrix.png, id=459, 225.84375pt x 301.125pt>
 File: Figures/letter-matrix.png Graphic file (type png)
 <use Figures/letter-matrix.png>
 Package pdftex.def Info: Figures/letter-matrix.png  used on input line 563.
 (pdftex.def)             Requested size: 129.30663pt x 172.41954pt.
- [23]
+
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24 <./Figures/letter-matrix.png>] [25]
+[23 <./Figures/letter-matrix.png>] [24]
 Poglavlje 8..
-<Figures/korizmena9/1.png, id=482, 1042.89626pt x 42.1575pt>
+<Figures/korizmena9/1.png, id=478, 1042.89626pt x 42.1575pt>
 File: Figures/korizmena9/1.png Graphic file (type png)
 <use Figures/korizmena9/1.png>
 Package pdftex.def Info: Figures/korizmena9/1.png  used on input line 688.
@@ -1171,7 +1175,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 686--689
 [][]
  []
 
-<Figures/korizmena9/2.png, id=483, 1042.89626pt x 40.15pt>
+<Figures/korizmena9/2.png, id=479, 1042.89626pt x 40.15pt>
 File: Figures/korizmena9/2.png Graphic file (type png)
 <use Figures/korizmena9/2.png>
 Package pdftex.def Info: Figures/korizmena9/2.png  used on input line 694.
@@ -1181,7 +1185,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 692--695
 [][]
  []
 
-<Figures/korizmena9/3.png, id=484, 1042.89626pt x 39.14626pt>
+<Figures/korizmena9/3.png, id=480, 1042.89626pt x 39.14626pt>
 File: Figures/korizmena9/3.png Graphic file (type png)
 <use Figures/korizmena9/3.png>
 Package pdftex.def Info: Figures/korizmena9/3.png  used on input line 699.
@@ -1191,7 +1195,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 697--700
 [][]
  []
 
-<Figures/korizmena9/4.png, id=485, 1042.89626pt x 38.1425pt>
+<Figures/korizmena9/4.png, id=481, 1042.89626pt x 38.1425pt>
 File: Figures/korizmena9/4.png Graphic file (type png)
 <use Figures/korizmena9/4.png>
 Package pdftex.def Info: Figures/korizmena9/4.png  used on input line 704.
@@ -1201,7 +1205,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 702--705
 [][]
  []
 
-<Figures/korizmena9/5.png, id=486, 1042.89626pt x 38.1425pt>
+<Figures/korizmena9/5.png, id=482, 1042.89626pt x 38.1425pt>
 File: Figures/korizmena9/5.png Graphic file (type png)
 <use Figures/korizmena9/5.png>
 Package pdftex.def Info: Figures/korizmena9/5.png  used on input line 709.
@@ -1211,7 +1215,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 707--710
 [][]
  []
 
-<Figures/korizmena9/6.png, id=487, 1042.89626pt x 38.1425pt>
+<Figures/korizmena9/6.png, id=483, 1042.89626pt x 38.1425pt>
 File: Figures/korizmena9/6.png Graphic file (type png)
 <use Figures/korizmena9/6.png>
 Package pdftex.def Info: Figures/korizmena9/6.png  used on input line 714.
@@ -1221,7 +1225,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 712--715
 [][]
  []
 
-<Figures/korizmena9/7.png, id=488, 1042.89626pt x 36.135pt>
+<Figures/korizmena9/7.png, id=484, 1042.89626pt x 36.135pt>
 File: Figures/korizmena9/7.png Graphic file (type png)
 <use Figures/korizmena9/7.png>
 Package pdftex.def Info: Figures/korizmena9/7.png  used on input line 719.
@@ -1231,7 +1235,7 @@ Overfull \hbox (5.72635pt too wide) in paragraph at lines 717--720
 [][]
  []
 
-<Figures/korizmena9/8.png, id=489, 1042.89626pt x 36.135pt>
+<Figures/korizmena9/8.png, id=485, 1042.89626pt x 36.135pt>
 File: Figures/korizmena9/8.png Graphic file (type png)
 <use Figures/korizmena9/8.png>
 Package pdftex.def Info: Figures/korizmena9/8.png  used on input line 724.
@@ -1241,7 +1245,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 722--725
 [][]
  []
 
-<Figures/korizmena9/9.png, id=490, 1042.89626pt x 34.1275pt>
+<Figures/korizmena9/9.png, id=486, 1042.89626pt x 34.1275pt>
 File: Figures/korizmena9/9.png Graphic file (type png)
 <use Figures/korizmena9/9.png>
 Package pdftex.def Info: Figures/korizmena9/9.png  used on input line 729.
@@ -1251,31 +1255,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 727--730
 [][]
  []
 
-<Figures/korizmena9/10.png, id=491, 517.935pt x 20.57687pt>
+<Figures/korizmena9/10.png, id=487, 517.935pt x 20.57687pt>
 File: Figures/korizmena9/10.png Graphic file (type png)
 <use Figures/korizmena9/10.png>
 Package pdftex.def Info: Figures/korizmena9/10.png  used on input line 734.
 (pdftex.def)             Requested size: 374.86775pt x 14.89351pt.
-[26
+[25
 
-] [27 <./Figures/korizmena9/1.png (PNG copy)> <./Figures/korizmena9/2.png (PNG 
+] [26 <./Figures/korizmena9/1.png (PNG copy)> <./Figures/korizmena9/2.png (PNG 
 copy)> <./Figures/korizmena9/3.png (PNG copy)> <./Figures/korizmena9/4.png (PNG
  copy)> <./Figures/korizmena9/5.png (PNG copy)> <./Figures/korizmena9/6.png (PN
 G copy)> <./Figures/korizmena9/7.png (PNG copy)> <./Figures/korizmena9/8.png (P
 NG copy)> <./Figures/korizmena9/9.png (PNG copy)> <./Figures/korizmena9/10.png>
 ]
 Poglavlje 9..
-[28
+[27
 
 ]
 Poglavlje 10..
-(./zavrsni_rad.bbl [29
+(./zavrsni_rad.bbl [28
 
-] [30
+] [29
 
-] [31] [32]) [33] [34
+] [30]) [31] [32
 
-] [35
+] [33
 
 ]
 pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) h
@@ -1301,7 +1305,11 @@ Package blindtext Warning: croatian not defined, using English instead.
 Package blindtext Warning: croatian not defined, using English instead.
 (blindtext)                 on input line 798.
 
-[36
+
+Package blindtext Warning: croatian not defined, using English instead.
+(blindtext)                 on input line 798.
+
+[34
 
 
 ]
@@ -1309,11 +1317,7 @@ Package blindtext Warning: croatian not defined, using English instead.
 Package blindtext Warning: croatian not defined, using English instead.
 (blindtext)                 on input line 798.
 
-
-Package blindtext Warning: croatian not defined, using English instead.
-(blindtext)                 on input line 798.
-
-[37] (./zavrsni_rad.aux)
+[35] (./zavrsni_rad.aux)
  ***********
 LaTeX2e <2023-06-01> patch level 1
 L3 programming layer <2023-10-10>
@@ -1469,13 +1473,13 @@ Package rerunfilecheck Info: File `zavrsni_rad.out' has not changed.
 (rerunfilecheck)             Checksum: D8D3A14079797C297CDE67C7A8DFD82E;5184.
  ) 
 Here is how much of TeX's memory you used:
- 20865 strings out of 474503
- 321408 string characters out of 5756704
+ 20863 strings out of 474503
+ 321394 string characters out of 5756704
  1950043 words of memory out of 5000000
  42352 multiletter control sequences out of 15000+600000
  668537 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 87i,17n,131p,771b,1556s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 87i,17n,131p,771b,1554s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2023/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Bold.pfb><
 c:/texlive/2023/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><
 c:/texlive/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb><c:/tex
@@ -1485,10 +1489,10 @@ live/2023/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb><c:/t
 exlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb><c:/texlive/202
 3/texmf-dist/fonts/type1/public/cm-super/sftt1095.pfb><c:/texlive/2023/texmf-di
 st/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on zavrsni_rad.pdf (40 pages, 3487756 bytes).
+Output written on zavrsni_rad.pdf (38 pages, 3487059 bytes).
 PDF statistics:
- 675 PDF objects out of 1000 (max. 8388607)
- 559 compressed objects within 6 object streams
- 137 named destinations out of 1000 (max. 500000)
+ 667 PDF objects out of 1000 (max. 8388607)
+ 553 compressed objects within 6 object streams
+ 135 named destinations out of 1000 (max. 500000)
  446 words of extra memory for PDF output out of 10000 (max. 10000000)
 

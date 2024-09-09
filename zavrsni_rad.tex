@@ -380,7 +380,7 @@ Ocularov generativni model radi vrlo sličnu stvar. \ref{fig:typesetting-model} 
 
 \subsection{Model tinte}
 
-%\setlength{\parskip}{10pt}
+\setlength{\parskip}{0pt}
 \begin{multicols}{2}	
 	% First column
 	Kako bi generirani znak bio sličan ulaznom potrebno je odabrati prikladnu količinu tinte, ali i vertikalni pomak.
@@ -391,13 +391,13 @@ Ocularov generativni model radi vrlo sličnu stvar. \ref{fig:typesetting-model} 
 	
 	\section{Model šuma}
 	
-	Tekst
-	
+	Model šuma simulira degradaciju slike koja nastaje tijekom procesa tiskanja dodavanjem šuma u obliku neovisnog bijeljenja piksela prema Gaussovoj distribuciji.
 	
 	% Second column
 	\columnbreak
 	\begin{figure}[H]
 		\centering
+		\vspace{10pt}
 		\includegraphics[width=0.9\linewidth]{Figures/inking-model.png} 
 		\caption{Stohastički proces zacrnjivanja piksela glifa \cite{Berg2013}}
 		\label{fig:inking-model}
@@ -405,7 +405,7 @@ Ocularov generativni model radi vrlo sličnu stvar. \ref{fig:typesetting-model} 
 	
 \end{multicols}
 
-
+Na kraju zadržava najcrnje piksele kao što je učinjeno na ulazu tijekom binarizacije.
 
 
 
