@@ -246,14 +246,27 @@ Iz specifičnosti zadatka, tj. starosti knjiga,  proizlaze određene poteškoće
 
 \section{Pregled literature}
 
-\textcolor{red}{U radu o Ocularu ima lista radova nekih.}
+Budući da je područje rada dosta usko, ali i zahvaljujući činjenici da napredak općenitijih modernih rješenja, bilo arhitektura OCR sustava bilo obrade prirodnog jezika, u novije vrijeme zasjenjuje specijalizirane sustave, nema mnogo radova na temu transkripcije starih dokumenata.
 
-\cite{Berg2013}
+Prvi značajan i još uvijek relevantan doprinos ujedno je i obuhvaćen ovim radom, a to su radovi u kojima je prezentiran \cite{Berg2013} i unaprijeđen Ocular \cite{Berg2014, Garrette2015, Garrette2016}, koji je razjašnjen u poglavlju \ref{pog:ocular} te se stoga ne će o njemu duljiti ovdje.
+
+
 \cite{Springmann2014}
+\cite{Springmann2017}
+
+
 \cite{Christy2017}
 \cite{Wick2018}
-\cite{Garrette2015}
-\cite{Garrette2016}
+
+\textcolor{red}{U radu o Ocularu ima lista radova nekih.}
+
+
+Iako se ne tiče izričtio starih dokumenata te zahtijeva nadzirano učenje, rad \textit{OCR Post Correction for Endangered Language Texts} \cite{Rijhwani2022} osobito je obećavajuć.
+
+Naime, razvijen je model za ispravljanje transkripcije OCR sustava koji zahtijeva vrlo malo podataka za nadzirano učenje i uz to podržava učenje iz dvojezičnih ili prevedenih dokumenata. 
+
+Za razliku od Oculara koji inkorporira jezični model u sam proces transkripcije, najveća prednost ovog rješenja jest njegova modularnost, tj. mogućnost korištenja na tekstu neovisno o OCR modelu.
+
 
 
 %-------------------------------------------------------------------------------
@@ -462,6 +475,13 @@ Budući da ta mjera ovisi o duljini teksta, dijeljenjem Levenshteinove udaljenos
 
 \textbf{Stopa pogreške za riječi} (eng. \textit{Word Error Rate}) dobiva se uzimanjem riječi za najmanju jedinicu zamjene pri računanju Levenshteinove udaljenosti, tj. ako su jedan ili više znakova u riječi pogrešni čitava riječ broji se kao pogrešna, te dijeljenjem te udaljenosti s ukupnim brojem riječi.
 
+\section{Naknadna obrada}
+
+\textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
+
+Za Ocular duge crte u -
+
+Jednostavno se može naknadno utvrditi treba li biti duga ili kratka crta.
 
 %-------------------------------------------------------------------------------
 \chapter{Optimizacija Oculara}
@@ -614,7 +634,14 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 
 \textcolor{red}{Rad na Summi. Loši rezultati i malo podataka. Spominjati ili ne?}
 
+Kako bi uspješno prepoznavali arhaične ortografske varijacije, u izvornom radu \cite{Garrette2016} pretvorbom suvremenih tekstova, na temelju pravila koja su definirali jezikoslovci, konstruiran je skup podataka s arhaičnim ortografskim varijacijama.
+
+U ovom odjeljku ukratko se demonstrira kako je za uspješnu transkripciju vrlo starih dokumenata arhaičnog jezika potreban značajniji trud od jednostavnog treniranja modela na korpusu suvremenog teksta.
+
+
 \subsection{Jezični model}
+
+Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na tekstovima s dotad manjom preciznošću prepoznavanja, kao što je \textit{Summa nauka christianskoga}, međutim, povećanje skupa podataka nije dovelo do značajnog poboljšanja u preciznosti, ali je značajno usporilo trening i transkripciju.
 
 \bgroup
 \def\arraystretch{1.25}
@@ -630,8 +657,6 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 	\label{tab:ortography_performance}
 \end{table}
 \egroup
-
-Moglo bi se očekivati da će veći rječnik više doprinijeti uspjehu na tekstovima s dotad manjom preciznošću prepoznavanja, kao što je \textit{Summa nauka christianskoga}, međutim, povećanje skupa podataka nije dovelo do značajnog poboljšanja u preciznosti, ali je značajno usporilo trening i transkripciju.
 
 Minimalno poboljšanje vidljivo u tablici \ref{tab:lm_performance} za \textit{Summu} u granicama je slučajnosti, osobito uzevši u obzir da je za tu knjigu ispitivana samo jedna stranica (iako je trening modela fonta bio na 6) naspram 12 za \textit{Korizmenu okružnicu}.
 
@@ -739,24 +764,29 @@ A na slici \ref{fig:compare} vidljiv je primjer transkripcije za najzahtjevniju 
 	\label{fig:compare}
 \end{figure}
 
-%-------------------------------------------------------------------------------
-\chapter{Diskusija}
-\label{pog:diskusija}
-
-Ideje za nadogradnje: počeci i krajevi redaka su obično Ocularu kritični. Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba.
-
-Ograničenja Oculara - brzina, CUDA (java)
-
-Zamjena katekizam s katalo sam? Potencijal za napredak? Već postoji parametar za to?
-
-\textcolor{red}{\textit{Tesseract zamjena ',,' (dva zareza) s " (ravni navodnici)}}
 
 
 %--- ZAKLJUČAK / CONCLUSION ----------------------------------------------------
 \chapter{Zaključak}
 \label{pog:zakljucak}
 
-Komentirati konvergenciju računalnog vida, neuralnih mreža, NLP-a i OCR-a.
+Usprkos općenitom napretku OCR sustava, suvremena rješenja imaju određene manjkavosti praktične naravi. Poglavito to je potreba za skupovima označenih podataka, a često i velikim jezičnim korpusom kako bi se prilagodila novom jeziku.
+
+Tesseract pak predstavlja jednostavno, gotovo rješenje no uz nezadovoljavajuća preciznost. Ocular, s druge strane, izbjegavajući zahtjeve nadziranog učenja te nadilazeći Tesseractovu preciznost na starim dokumentima, ipak pati od svojih problema.
+
+Prvenstveno to je resursno zahtjevan i dugotrajan proces učenja i transkripcije (min. po str.), i to usprkos OpenCL paralelizaciji, koja je korištena umjesto bolje CUDA paralelizacije, jer se potonju, notornu za lošu kompatibilnost s Java-om, nije uspjelo omogućiti.
+
+Osim toga, često ispušta kraće retke, što je za cjelovito rješenje neprihvatljivo te je stoga Ocularov ispis ispravljen Tesseractovim.
+
+Dodatno poboljšanje preciznosti predloženog sustava moglo bi se postići složenijim sustavom glasanja temeljenom na detaljnijoj analizi grešaka pojedinih modela.
+
+Primjerice, uzevši u obzir kako Ocularov jezični model djeluje nad retcima umjesto nad rečenicama, očekivalo bi se da čini više grešaka na prvoj riječi retka nego Tesseract, osobito uslijed hifenacije.
+
+S druge strane, čini se kako Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba uslijed većeg oslanjanja ne predobradu naspram jezičnog modela te bi u tom slučaju preferiranje Ocularove interpunkcije poboljšalo uspješnost.
+
+Na žalost za Ocular, ali na sreću optičkog raspoznavanja znakova, modernije arhitekture pružaju sve bolje rezultate, a i razvojem velikih jezičnih modela dolazi do sve veće konvergencija OCR-a i obrade prirodnog jezika.
+
+Imajući taj trend u vidu, budućnost transkripcije povijesnih dokumenata nazire se u naknadnoj obradi teksta, koja bi pružala svevremensko rješenje neovisno o klasifikacijskoj arhitekturi.
 
 
 

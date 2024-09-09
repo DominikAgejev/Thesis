@@ -14,6 +14,10 @@ Repeated entry---line 350 of file library.bib
  : @misc{Leptonica
  :                ,
 I'm skipping whatever remains of this entry
+Repeated entry---line 421 of file library.bib
+ : @misc{Rijhwani2022
+ :                   ,
+I'm skipping whatever remains of this entry
 Warning--empty journal in Fujitake2023
 Warning--empty journal in Olejniczak2022
 Warning--empty journal in Borovikov2014
@@ -22,45 +26,45 @@ Warning--empty year in Hassanein2015
 Warning--empty journal in Noaman2015
 Warning--empty journal in Vaswani2023
 Warning--empty journal in Wick2018
-You've used 32 entries,
+You've used 34 entries,
             4225 wiz_defined-function locations,
-            1041 strings with 13841 characters,
-and the built_in function-call counts, 21122 in all, are:
-= -- 1606
-> -- 480
-< -- 148
-+ -- 276
-- -- 83
-* -- 960
-:= -- 3180
-add.period$ -- 92
-call.type$ -- 32
-change.case$ -- 32
+            1050 strings with 14237 characters,
+and the built_in function-call counts, 22064 in all, are:
+= -- 1673
+> -- 510
+< -- 149
++ -- 290
+- -- 90
+* -- 999
+:= -- 3329
+add.period$ -- 98
+call.type$ -- 34
+change.case$ -- 34
 chr.to.int$ -- 363
-cite$ -- 40
-duplicate$ -- 1521
-empty$ -- 1771
-format.name$ -- 104
-if$ -- 5013
+cite$ -- 42
+duplicate$ -- 1599
+empty$ -- 1859
+format.name$ -- 113
+if$ -- 5235
 int.to.chr$ -- 0
-int.to.str$ -- 32
-missing$ -- 271
-newline$ -- 171
-num.names$ -- 26
-pop$ -- 729
+int.to.str$ -- 34
+missing$ -- 289
+newline$ -- 177
+num.names$ -- 28
+pop$ -- 779
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 1627
+skip$ -- 1702
 stack$ -- 0
-substring$ -- 879
-swap$ -- 1157
-text.length$ -- 27
+substring$ -- 881
+swap$ -- 1205
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 34
 warning$ -- 8
-while$ -- 77
-width$ -- 34
-write$ -- 350
-(There was 1 error message)
+while$ -- 79
+width$ -- 36
+write$ -- 366
+(There were 2 error messages)

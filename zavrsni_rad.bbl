@@ -142,6 +142,21 @@ C.-A. Boiangiu, R.~Ioanitescu, i R.-C. Dragomir, ``Voting-based ocr system'',
   \emph{Journal of Information Systems and Operations Management}, sv.~10, str.
   470--486, 9 2016.
 
+\bibitem{Berg2014}
+\BIBentryALTinterwordspacing
+T.~Berg-Kirkpatrick i D.~Klein, ``Improved typesetting models for historical
+  ocr'', str. 118--123, 2014. \url{https://doi.org/10.3115/v1/P14-2020}
+\BIBentrySTDinterwordspacing
+
+\bibitem{Garrette2015}
+D.~Garrette, H.~Alpert-Abrams, T.~Berg-Kirkpatrick, i D.~Klein, ``Unsupervised
+  code-switching for multilingual historical document transcription'', str.
+  1036--1041, 2015.
+
+\bibitem{Garrette2016}
+D.~Garrette i H.~Alpert-Abrams, ``An unsupervised model of orthographic
+  variation for historical document transcription'', 2016.
+
 \bibitem{Springmann2014}
 \BIBentryALTinterwordspacing
 U.~Springmann, D.~Najock, H.~Morgenroth, H.~Schmid, A.~Gotscharek, i F.~Fink,
@@ -150,6 +165,11 @@ U.~Springmann, D.~Najock, H.~Morgenroth, H.~Schmid, A.~Gotscharek, i F.~Fink,
   1em plus 0.5em minus 0.4em\relax Association for Computing Machinery, 2014.,
   str. 71--75. \url{https://doi.org/10.1145/2595188.2595205}
 \BIBentrySTDinterwordspacing
+
+\bibitem{Springmann2017}
+U.~Springmann i A.~Lüdeling, ``Ocr of historical printings with an application
+  to building diachronic corpora: A case study using the ridges herbal
+  corpus'', \emph{Digital Humanities Quarterly}, sv.~11, 2017.
 
 \bibitem{Christy2017}
 \BIBentryALTinterwordspacing
@@ -167,14 +187,9 @@ C.~Wick, C.~Reul, i F.~Puppe, ``Improving ocr accuracy on early printed books
   \url{http://arxiv.org/abs/1802.10033}
 \BIBentrySTDinterwordspacing
 
-\bibitem{Garrette2015}
-D.~Garrette, H.~Alpert-Abrams, T.~Berg-Kirkpatrick, i D.~Klein, ``Unsupervised
-  code-switching for multilingual historical document transcription'', str.
-  1036--1041, 2015.
-
-\bibitem{Garrette2016}
-D.~Garrette i H.~Alpert-Abrams, ``An unsupervised model of orthographic
-  variation for historical document transcription'', 2016.
+\bibitem{Rijhwani2022}
+S.~Rijhwani, G.~Neubig, A.~Black, T.~Berg-Kirkpatrick, i D.~Rosenblum,
+  ``Improving optical character recognition for endangered languages'', 2022.
 
 \bibitem{Leptonica}
 \BIBentryALTinterwordspacing
@@ -203,12 +218,6 @@ G.~Dharmale, P.~Shirsath, A.~Shinde, V.~Sawant, i A.~Chougule,
   ``Remicare—medicine intake tracker and healthcare assistant'',
   \emph{Lecture Notes in Networks and Systems}, sv. 540, str. 273--283, 2023.
   \url{https://doi.org/10.1007/978-981-19-6088-8_25}
-\BIBentrySTDinterwordspacing
-
-\bibitem{Berg2014}
-\BIBentryALTinterwordspacing
-T.~Berg-Kirkpatrick i D.~Klein, ``Improved typesetting models for historical
-  ocr'', str. 118--123, 2014. \url{https://doi.org/10.3115/v1/P14-2020}
 \BIBentrySTDinterwordspacing
 
 \bibitem{Ocular}
