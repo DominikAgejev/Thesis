@@ -282,6 +282,18 @@ Tesseract se koristi Otsuovom metodom, no ne za postavljanje jednog globalnog pr
 
 Za slike koje nisu više-manje dvobojne nego pate od većih nejednakosti u osvijetljenju Tesseract podržava i Sauvolinu \cite{Sauvola1997} lokalnu metodu binarizacije koja utvrđuje prag za svaki piksel slike na temelju srednje vrijednosti i standardne devijacije okolnih piksela.
 
+
+\subsection{Analiza uređenja stranice}
+
+\begin{description}
+	\item[Detekcija slika] \hfill \\ Funkcijom \texttt{FindImages} Tesseract pronalazi slike koje potom zanemaruje prilikom prepoznavanja teksta.
+	\item[Detekcija crta] \hfill \\ Tesseract rabi Leptonicu za pronalaženje i uklanjanje crta, odnosno razdjelnih linija, na ulaznoj slici što pomaže u odvajanju teksta od grafičkih elemenata poput tablica ili obrazaca.
+	\item[Analiza povezanih komponenti] \hfill \\ Ovaj korak izvodi funkcija \texttt{find\_components} koja skenira binarnu sliku piksel po piksel, označava povezane crne piksele i grupira ih u povezane komponente koje predstavljaju potencijalne znakove ili dijelove znakova.
+	\item[Detekcija orijentacije i pisma] \hfill \\ Ako je ova opcija omogućena, Tesseract će provjeriti o kojem je pismu riječ (latinično, kinesko,...) i u kojem smjeru se piše (kineski se npr. može pisati odozgo prema dolje ili zdesna na lijevo).
+	\item[Detekcija stupaca] \hfill \\ Koristi se ako je tekst pisan u stupcima poput novinskog članka ili znanstvenog rada.
+	\item[Pronalazak redaka teksta] \hfill \\ Tesseract analizira prostorne odnose između povezanih komponenti kako bi detektirao linije teksta. Ovaj korak koristi statistički pristup temeljen na razmacima između komponenti.
+\end{description}
+
 \subsection{Eliminacija šuma}
 
 Razlučivši pozadinu od ostatka prelazi se na brisanje šuma poput razlivene tinte. To se postiže pronalaskom spojenih piksela te usporedbom karakteristika nakupine s tipičnim karakteristikama teksta.
@@ -294,17 +306,6 @@ Tijekom analize razmatra se: \cite{Tesseract}
 	\item[Obujmljena površina] \hfill \\ Gledajući površinu koju skupina piksela okružuje možemo procijeniti je li znak ili nije.
 	\item[Broj nakupina po retku] \hfill \\ Brojeći skupine piksela u retku provjerava se omjer malih nakupina naspram skupina veličine znaka.
  	\item[Odnos među točkama] \hfill \\ Ako se detektira velik broj susjednih točaka na istoj visini ne odbacuju se već su označene kao "vodeće točke" sadržaja.
-\end{description}
-
-\subsection{Analiza uređenja stranice}
-
-\begin{description}
-	\item[Detekcija slika] \hfill \\ Funkcijom \texttt{FindImages} Tesseract pronalazi slike koje potom zanemaruje prilikom prepoznavanja teksta.
-	\item[Detekcija crta] \hfill \\ Tesseract rabi Leptonicu za pronalaženje i uklanjanje crta, odnosno razdjelnih linija, na ulaznoj slici što pomaže u odvajanju teksta od grafičkih elemenata poput tablica ili obrazaca.
-	\item[Analiza povezanih komponenti] \hfill \\ Ovaj korak izvodi funkcija \texttt{find\_components} koja skenira binarnu sliku piksel po piksel, označava povezane crne piksele i grupira ih u povezane komponente koje predstavljaju potencijalne znakove ili dijelove znakova.
-	\item[Detekcija orijentacije i pisma] \hfill \\ Ako je ova opcija omogućena, Tesseract će provjeriti o kojem je pismu riječ (latinično, kinesko,...) i u kojem smjeru se piše (kineski se npr. može pisati odozgo prema dolje ili zdesna na lijevo).
-	\item[Detekcija stupaca] \hfill \\ Koristi se ako je tekst pisan u stupcima poput novinskog članka ili znanstvenog rada.
-	\item[Pronalazak redaka teksta] \hfill \\ Tesseract analizira prostorne odnose između povezanih komponenti kako bi detektirao linije teksta. Ovaj korak koristi statistički pristup temeljen na razmacima između komponenti.
 \end{description}
 
 \section{Izdvajanje značajki i klasifikacija}
@@ -439,10 +440,11 @@ Budući da Tesseract ima ugrađenu predobradu slika, radi pravednije usporedbe s
 
 \begin{itemize}
 	\item Fra Jozo Garić, biskup – Korizmena okružnica (1932.) \ref{slk:korizmena}
-	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.) \ref{slk:summa}
+	\begin{itemize}
+		\item 3 stranice za trening znakovlja
+		\item 12 stranica s 4,623 riječi za transkripciju
+	\end{itemize}
 \end{itemize}
-
-Korizmena okružnica korištena je za sva ispitivanja osim za isprobavanje ortografskih mogućnosti gdje je izabrana \textit{Summa} kao primjer zahtjevnog ulaza za sustav.
 
 \begin{figure}[H]
 	\centering
@@ -451,12 +453,24 @@ Korizmena okružnica korištena je za sva ispitivanja osim za isprobavanje ortog
 	\label{slk:korizmena}
 \end{figure}
 
+\newpage
+
+\begin{itemize}
+	\item Sv. Petar Kanizije – Summa nauka christianskoga (1583.) \ref{slk:summa}
+	\begin{itemize}
+		\item 6 stranica za trening modela znakovlja
+		\item 1 stranica s 241 riječi za transkripciju
+	\end{itemize}
+\end{itemize}
+
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1.0\linewidth]{Figures/summa.png} 
 	\caption{Izvadak iz \textit{Summe nauka christianskoga}}
 	\label{slk:summa}
 \end{figure}
+
+Korizmena okružnica korištena je za sva ispitivanja osim za isprobavanje ortografskih mogućnosti gdje je izabrana \textit{Summa} kao primjer zahtjevnog ulaza za sustav.
 
 Oba sustava imaju određena ograničenja na ulaze: 
 
@@ -602,7 +616,7 @@ Rezultati ispitivanja optimalnog broja faza treninga modela fonta vidljivi su u 
 		 		& 50  & 50 & \textbf{1.05} & \textbf{2.74}   \\ \hline
 		3x3 str. + 2x2 str. & 50 & 50 & 1.19 & 2.9 \\ \hline                                              
 	\end{tabular}
-	\caption{\textcolor{red}{Lorem ipsum}}
+	\caption{Uspješnost modela prema broju iteracija treninga}
 	\label{tab:7.3}
 \end{table}
 \egroup
@@ -623,7 +637,7 @@ Gledajući pobliže, uspješnost opada na jednoj od dvije stranice koje su proš
 		\multirow{2}{*}{str. 6.} & 3x3 & 1.17 & 3.16 \\ \cline{2-4}
 								 & 3x3+2x2 & \textbf{0.95} & \textbf{1.46} \\ \hline
 	\end{tabular}
-	\caption{}
+	\caption{Uspješnost modela prema broju iteracija treninga na stranicama koje su bile u dodatnim iteracijama}
 	\label{tab:pages5and6}
 \end{table}
 \egroup
@@ -780,9 +794,9 @@ Dodatno poboljšanje preciznosti predloženog sustava moglo bi se postići slož
 
 Primjerice, uzevši u obzir kako Ocularov jezični model djeluje nad retcima umjesto nad rečenicama, očekivalo bi se da čini više grešaka na prvoj riječi retka nego Tesseract, osobito uslijed hifenacije.
 
-S druge strane, čini se kako Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba uslijed većeg oslanjanja ne predobradu naspram jezičnog modela te bi u tom slučaju preferiranje Ocularove interpunkcije poboljšalo uspješnost.
+S druge strane, čini se kako Tesseract češće prepoznaje interpunkciju kada treba i kada ne treba uslijed većeg oslanjanja na predobradu naspram jezičnog modela te bi u tom slučaju preferiranje Ocularove interpunkcije poboljšalo uspješnost.
 
-Na žalost za Ocular, ali na sreću optičkog raspoznavanja znakova, modernije arhitekture pružaju sve bolje rezultate, a i razvojem velikih jezičnih modela dolazi do sve veće konvergencija OCR-a i obrade prirodnog jezika.
+Na žalost za Ocular, ali na sreću optičkog raspoznavanja teksta, modernije arhitekture pružaju sve bolje rezultate, a i razvojem velikih jezičnih modela dolazi do sve veće konvergencija OCR-a i obrade prirodnog jezika.
 
 Imajući taj trend u vidu, budućnost transkripcije povijesnih dokumenata nazire se u naknadnoj obradi teksta, koja bi pružala svevremensko rješenje neovisno o klasifikacijskoj arhitekturi.
 
@@ -820,7 +834,7 @@ Imajući taj trend u vidu, budućnost transkripcije povijesnih dokumenata nazire
 %--- PRIVITCI / APPENDIX -------------------------------------------------------
 
 % Sva poglavlja koja slijede će biti označena slovom i riječi privitak / All following chapters will be denoted with an appendix and a letter
-\backmatter
+%\backmatter
 
 
 \end{document}
