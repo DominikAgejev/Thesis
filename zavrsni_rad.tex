@@ -258,7 +258,7 @@ U novijem radu iz 2017. \cite{Springmann2017}, Springmann i sur. čine sličnu s
 
 Christy i sur. \cite{Christy2017} pak detaljno opisuju proces masovne digitalizaciju tiskanih tekstova koristeći širok raspon alata te opširno razlažući korake predobrade, naknadne obrade, itd.
 
-Iako je rad Wicka i sur. \cite{Wick2018} usmjeren na starije tiskane knjige, bit rada je općenitiji: uporaba dublje LSTM mreže uz više označenih podataka te sustav glasanja kako bi se postigli vrhunski rezultati.
+Iako je rad Wicka i sur. \cite{Wick2018} usmjeren na starije tiskane knjige, bit rada je općenitija: uporaba dublje LSTM mreže uz više označenih podataka te sustav glasanja kako bi se postigao CER ispod čak 0.5\%.
 
 Usprkos tome što se ne tiče izričito starih dokumenata te zahtijeva nadzirano učenje, rad \textit{OCR Post Correction for Endangered Language Texts} \cite{Rijhwani2022} osobito je obećavajuć. Naime, razvijen je model za ispravljanje transkripcije OCR sustava koji zahtijeva vrlo malo podataka za nadzirano učenje i uz to podržava učenje iz dvojezičnih ili prevedenih dokumenata. 
 
@@ -697,7 +697,7 @@ Algoritam glasanja čita redak po redak Tesseractov ispis i traži odgovarajući
 	\label{fig:python_code}
 \end{figure}
 
-Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \ref{tab:system_performance}.
+Suradnjom dvaju modela dobiva se 63.16\% bolji CER i 65.78\% bolji WER od samog Tesseracta kao što je vidljivo u tablici \ref{tab:system_performance}.
 
 \bgroup
 \def\arraystretch{1.25}
@@ -716,7 +716,7 @@ Suradnjom dvaju modela dobiva se bolji rezultat kao što je vidljivo u tablici \
 \end{table}
 \egroup
 
-A na slici \ref{fig:compare} vidljiv je primjer transkripcije za najzahtjevniju stranicu ispitnog skupa.
+Na slici \ref{fig:compare} vidljiv je primjer transkripcije za najzahtjevniju stranicu ispitnog skupa.
 
 % Line 1
 \begin{figure}[H]
